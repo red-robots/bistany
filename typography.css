@@ -1,0 +1,80 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #353535;
+}
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+#tinymce p,
+#page-body-wrap p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #353535;
+    margin: 20px 0 20px 0;
+}
+#tinymce ul,
+#page-body-wrap ul,
+#tinymce ol,
+#page-body-wrap ol {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #353535;
+}
+
+#tinymce a,
+#page-body-wrap  a {
+  color: #347394;
+}
+
+#tinymce i,
+#tinymce em,
+#page-body-wrap i,
+#page-body-wrap em {
+  font-weight: 300;
+  color: #ADACA5;
+}
+
+#tinymce img,
+#page-body-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #555555;
+  font-weight: 300;
+}
+
+#tinymce h1,
+#page-body-wrap h1 {
+  font-size: 30pt;
+}
+#tinymce h2,
+#page-body-wrap h2 {
+  font-size: 27pt;
+}
+#tinymce h3,
+#page-body-wrap h3 {
+  font-size: 24pt;
+}
+#page-body-wrap .blog-title h2 {
+    font-size: 40pt;
+}
+
+
+/* Custom Styles
+-------------------------------------------------------------- */
+
+
+#tinymce .manufact,
+#page-body-wrap .manufact {
+    padding-top: 100px;
+}

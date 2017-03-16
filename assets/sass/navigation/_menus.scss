@@ -1,0 +1,253 @@
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 1.5em;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		float: left;
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	// background-color: $color-green;
+	ul.sub-menu {
+		background-color: rgba(255,255,255,.1);
+	}
+	
+}
+
+
+@media screen and (min-width: $tabwidth) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+button.menu-toggle {
+	border: 0px;
+	text-shadow: none;
+	// background-color: $color-green;
+	color: #fff;
+	box-shadow: none;
+	width: auto;
+	display: inline-block;
+	margin: 10px auto;
+	border-radius: 0;
+	text-transform: uppercase;
+	font: {
+		
+		weight :300;
+		size: 20px;
+	}
+	
+	@media screen and (min-width: $tabwidth) {
+		display: none;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+/***************** Menu *****************/
+
+#page-body-wrap .menu-bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 500;
+  width: 80px;
+  background-color: transparent;
+  color: #353535;
+  text-align: center;
+  cursor: default;
+  height: 50px;
+  -webkit-transition: .25s;
+  -moz-transition: .25s;
+  -o-transition: .25s;
+  -ms-transition: .25s;
+  transition: .25s;
+}
+
+#page-body-wrap .menu-bar .hamburger-icon {
+  width: 45px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#page-body-wrap .menu-bar .hamburger-icon div.hamburger {
+  height: 5px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  background-color: #353535;
+  -webkit-transition: .25s;
+  -moz-transition: .25s;
+  -o-transition: .25s;
+  -ms-transition: .25s;
+  transition: .25s;
+}
+
+#page-body-wrap .menu-bar:hover {
+  width: 340px;
+  color: #fff;
+  height: 100%;
+  background-color: #353535;
+  background-color: rgba(53, 53, 53, .9);
+}
+
+#page-body-wrap .menu-bar:hover .hamburger-icon div.hamburger {
+  background-color: #fff;
+}
+
+#page-body-wrap .menu-bar nav ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+#page-body-wrap .menu-bar:hover nav ul {
+  height: 100%;
+}
+
+#page-body-wrap .menu-bar nav ul li {
+  list-style: none;
+  margin-top: 0;
+  padding: 30px 30px 0 0;
+  width: 45px;
+  text-align: center;
+}
+
+#page-body-wrap .menu-bar:hover nav ul li {
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+  background-color: transparent;
+}
+
+#page-body-wrap .menu-bar nav ul li ul {
+  padding-left: 0;
+}
+
+#page-body-wrap .menu-bar:hover nav ul li ul {
+  padding-top: 50px;
+  padding-bottom: 200%;
+}
+
+#page-body-wrap .menu-bar nav ul li ul a {
+  color: #fff;
+  text-decoration: none;
+  display: none;
+}
+
+#page-body-wrap .menu-bar:hover nav ul li ul a {
+  display: initial;
+  width: 100%;
+}
+
+#page-body-wrap .menu-bar nav ul li ul a li {
+  font-weight: 300;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #777;
+  text-align: center;
+  padding-right: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  visibility: hidden;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -o-transition: .1s;
+  -ms-transition: .1s;
+  transition: .1s;
+}
+
+#page-body-wrap .menu-bar nav ul li:hover ul a li {
+  visibility: visible;
+}
+
+#page-body-wrap .menu-bar nav ul li:hover ul a li:hover {
+  background-color: #fff;
+  color: rgb(54, 69, 79);;
+}

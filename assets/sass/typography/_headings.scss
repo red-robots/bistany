@@ -1,0 +1,26 @@
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #555555;
+  font-weight: 300;
+}
+
+#tinymce h1,
+#page-body-wrap h1 {
+  font-size: 30pt;
+}
+#tinymce h2,
+#page-body-wrap h2 {
+  font-size: 27pt;
+}
+#tinymce h3,
+#page-body-wrap h3 {
+  font-size: 24pt;
+}
+#page-body-wrap .blog-title h2 {
+    font-size: 40pt;
+}
