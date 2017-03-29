@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: rgba(#fff, 0); /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote, q {

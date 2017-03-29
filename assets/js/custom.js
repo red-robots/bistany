@@ -36,28 +36,35 @@ jQuery(document).ready(function ($) {
 	*	Flexslider
 	*
 	------------------------------------*/
-	// $('.flexslider').flexslider({
-	// 	animation: "slide",
-	// }); // end register flexslider
-
+	
+	$('.flexslider').imagesLoaded( function() {
+		$('.flexslider').flexslider({
+			animation: "slide",
+			controlNav: true,
+			directionNav: true,
+			start: function(slider){
+		        $('.flexslider').resize();
+		    }
+		}); // end register flexslider
+	});
 	 // The slider being synced must be initialized first
-	  $('#carousel').flexslider({
-	    animation: "slide",
-	    controlNav: false,
-	    animationLoop: false,
-	    slideshow: false,
-	    itemWidth: 150,
-	    itemMargin: 5,
-	    asNavFor: '#slider'
-	  });
+	  // $('#carousel').flexslider({
+	  //   animation: "slide",
+	  //   controlNav: false,
+	  //   animationLoop: false,
+	  //   slideshow: false,
+	  //   itemWidth: 150,
+	  //   itemMargin: 5,
+	  //   asNavFor: '#slider'
+	  // });
 	 
-	  $('#slider').flexslider({
-	    animation: "slide",
-	    controlNav: false,
-	    animationLoop: false,
-	    slideshow: false,
-	    sync: "#carousel"
-	  });
+	  // $('#slider').flexslider({
+	  //   animation: "slide",
+	  //   controlNav: false,
+	  //   animationLoop: false,
+	  //   slideshow: false,
+	  //   sync: "#carousel"
+	  // });
 	
 	/*
 	*

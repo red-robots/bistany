@@ -1,0 +1,75 @@
+<?php
+/*
+*
+* Template Name: About
+*
+*
+*
+*/
+get_header();
+$background_image_url = get_field('featured_image');
+if( $background_image_url != '') {
+	$theClass = 'with-feat-image';
+} else {
+	$theClass = 'no-feat-image';
+}
+?>
+   
+<div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
+
+<div class="grad"></div>
+<div class="primary <?php echo $theClass; ?>">
+
+	<?php while(have_posts()) : the_post(); ?>
+		<header class="title">
+			<h1><?php the_title(); ?></h1>
+		</header>
+
+		<section class="content">
+			<?php the_content(); ?>
+		</section>
+
+	<?php endwhile; ?>
+
+<section class="press-awards">
+	<section class="press">
+		<h3>Press</h3>
+		<?php if(have_rows('press')) : while(have_rows('press')) : the_row(); 
+			$theTitle = get_sub_field('title');
+			$image = get_sub_field('press_cover');
+			// echo '<pre>';
+			// print_r($theTitle);
+			// echo '</pre>';
+			$pdf = get_sub_field('pdf');
+
+			$alt = $image['alt'];
+			$size = 'large';
+			$thumb = $image['sizes'][ $size ];
+	?>
+			<div class="image">
+				<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"  />
+				<?php if( $pdf ) { ?><a href="<?php echo $pdf; ?>">view pdf</a><?php } ?>
+			</div>
+		<?php endwhile; endif; ?>
+	</section>
+	<section class="awards">
+		<h3>Awards</h3>
+	<?php if(have_rows('awards')) : while(have_rows('awards')) : the_row(); 
+			$theTitle = get_sub_field('award_title');
+			$desc = get_sub_field('award_description');
+			$pdf = get_sub_field('pdf');
+	?>
+			<div class="award">
+				<?php if( $theTitle ) { ?><h4><?php echo $theTitle; ?></h4><?php } ?>
+				<?php if( $desc ) { ?><div class="desc"><?php echo $desc; ?></div><?php } ?>
+				<?php if( $pdf ) { ?><div class="view"><a href="<?php echo $pdf; ?>">view pdf</a></div><?php } ?>
+			</div>
+			<!-- award -->
+	<?php endwhile; endif; ?>
+	</section>
+</section>
+
+
+</div>
+<!-- primary -->
+<?php get_footer(); ?>

@@ -1,7 +1,7 @@
 <?php
 /*
 *
-* Default Template
+* Template Name: Contact
 *
 *
 *
@@ -25,9 +25,19 @@ if( $background_image_url != '') {
 			<h1><?php the_title(); ?></h1>
 		</header>
 
-		<section class="content">
-			<?php the_content(); ?>
-		</section>
+		<div class="contact-left">
+			<?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
+		</div>
+
+		<div class="contact-right">
+			<section class="content">
+				<?php the_content(); ?>
+				<div class="map">
+					<?php the_field('map'); ?>
+				</div>
+			</section>
+		</div>
+		<!-- right -->
 
 	<?php endwhile; ?>
 

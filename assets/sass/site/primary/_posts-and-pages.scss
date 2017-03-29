@@ -35,21 +35,21 @@
     padding-top: 100px;
 }
 body {
-  background-color: #ffffff;
+  background-color: rgba(#ffffff, 0);
 }
 
-#page-body-wrap p {
-  font-size: 16pt;
-}
+// #page-body-wrap p {
+//   font-size: 16pt;
+// }
 
-#page-body-wrap a {
-  font-size: 16pt;
-}
+// #page-body-wrap a {
+//   font-size: 16pt;
+// }
 
-#tinymce a,
-#page-body-wrap  a {
-  color: #a5673f;
-}
+// #tinymce a,
+// #page-body-wrap  a {
+//   color: #a5673f;
+// }
 
 #page-body-wrap .btn {
   background-color: #FFD55A;
@@ -151,21 +151,42 @@ input[type="submit"] {
 #page-body-wrap .our-work a {
   text-decoration: none;
 }
+.our-work-type {
+  height: 100%;
+  position: relative;
+  width: 32%;
+  float: left;
+  cursor: pointer;
+  opacity: 0.75;
+  background-size: cover;
+  @include transition(all ease .25s);
+  align-items: center;
+  display: flex;
+  &.first {
+    margin-right: 1%;
+  }
+  &.last {
 
+  }
+  &:hover {
+     transform: scale(.95);
+  }
+  h3 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+  }
+}
 #page-body-wrap .our-work-kitchen {
-  background: url(../images/kitchen-bg.jpg) no-repeat center;
+  background: url(images/kitchen-bg.jpg) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
-  background-size: cover;
-  position: relative;
-  width: 32%;
-  margin-right: 1%;
-  height: 100%;
-  float: left;
-  cursor: pointer;
-  opacity: 0.75;
+  
+  
+  
+  
   -webkit-transition: .25s;
   -moz-transition: .25s;
   -o-transition: .25s;
@@ -178,7 +199,7 @@ input[type="submit"] {
   -moz-transform: scale(.95);
   -o-transform: scale(.95);
   -ms-transform: scale(.95);
-  transform: scale(.95);
+ 
 }
 
 #page-body-wrap .our-work-kitchen h3 {
@@ -191,7 +212,7 @@ input[type="submit"] {
 }
 
 #page-body-wrap .our-work-bath {
-  background: url(../images/bath-bg.jpg) no-repeat center;
+  background: url(images/bath-bg.jpg) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -230,7 +251,7 @@ input[type="submit"] {
 }
 
 #page-body-wrap .our-work-other {
-  background: url(../images/other-bg.jpg) no-repeat center;
+  background: url(images/other-bg.jpg) no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -268,7 +289,7 @@ input[type="submit"] {
 }
 
 #page-body-wrap .cabinetry-bg {
-  background: url(../images/cabinetry.jpg) no-repeat center center;
+  background: url(images/cabinetry.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -404,25 +425,43 @@ input[type="submit"] {
 }
 
 #page-body-wrap .kitchen {
-  // background-image: url(../images/kitchen-bg.jpg);
+  // background-image: url(images/kitchen-bg.jpg);
 
   background-position: center;
   background-size: cover;
 }
 
 #page-body-wrap .bath {
-  // background-image: url(../images/bath-bg.jpg);
+  // background-image: url(images/bath-bg.jpg);
   background-position: center;
   background-size: cover;
   margin-bottom: 50px;
 }
 
 #page-body-wrap .other {
-  // background-image: url(../images/other-bg.jpg) !important;
+  // background-image: url(images/other-bg.jpg) !important;
   background-position: center;
   background-size: cover;
 }
 
+
+.primary {
+  // margin-top: 100px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  position: relative;
+  z-index: 1000;
+  /*max-width: 960px; 12/8/15: Client wants width to be 80%, not a decision made by dev team*/
+  clear: both;
+  &.with-feat-image {
+    margin-top: -80px;
+  }
+  &.no-feat-image {
+    margin-top: 0;
+  }
+}
 /***************** About Us Page *****************/
 
 #page-body-wrap .inside-content {
@@ -660,17 +699,17 @@ input[type="submit"] {
   float: right;
 }
 
-#page-body-wrap .awards-button {
-  padding-top: 45px;
-  clear: both;
-}
+// #page-body-wrap .awards-button {
+//   padding-top: 45px;
+//   clear: both;
+// }
 
-#page-body-wrap .award {
-  float: left;
-  width: 30%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
+// #page-body-wrap .award {
+//   float: left;
+//   width: 30%;
+//   margin-left: 10%;
+//   margin-right: 10%;
+// }
 
 #page-body-wrap .award img {
   width: 100%;
@@ -747,7 +786,7 @@ input[type="submit"] {
   margin-top: -61px;
   width: 69px;
   height: 50px;
-  background: url(../images/arrow-left.png) no-repeat center;
+  background: url(images/arrow-left.png) no-repeat center;
   background-size: contain;
   z-index: 101;
   cursor: pointer;
@@ -761,7 +800,7 @@ input[type="submit"] {
   margin-top: -61px;
   width: 69px;
   height: 50px;
-  background: url(../images/arrow-right.png) no-repeat center;
+  background: url(images/arrow-right.png) no-repeat center;
   background-size: contain;
   z-index: 101;
   cursor: pointer;
@@ -841,15 +880,15 @@ input[type="submit"] {
 }
 
 #page-body-wrap .dutchmade-icon {
-  background-image: url(../images/kitchen2.jpg);
+  background-image: url(images/kitchen2.jpg);
 }
 
 #page-body-wrap .bentwood-icon {
-  background-image: url(../images/bath2.jpg);
+  background-image: url(images/bath2.jpg);
 }
 
 #page-body-wrap .elmwood-icon {
-  background-image: url(../images/other1.jpg);
+  background-image: url(images/other1.jpg);
 }
 
 #page-body-wrap .manufacturer {
@@ -952,15 +991,15 @@ h2#dutchmade, h2#bentwood, h2#elmwood {
 }
 
 #page-body-wrap .other-blog {
-  background-image: url(../images/other1.jpg);
+  background-image: url(images/other1.jpg);
 }
 
 #page-body-wrap .showroom-blog {
-  background-image: url(../images/showroom9.jpg);
+  background-image: url(images/showroom9.jpg);
 }
 
 #page-body-wrap .kitchen-blog {
-  background-image: url(../images/kitchen2.jpg);
+  background-image: url(images/kitchen2.jpg);
 }
 
 #page-body-wrap .blog-read-more {
@@ -1034,4 +1073,127 @@ h2#dutchmade, h2#bentwood, h2#elmwood {
 #page-body-wrap .view-blog-mid {
   margin-left: .5%;
   margin-right: .5%;
+}
+
+section.before-after {
+  width: 100%;
+  float: left;
+  .row {
+    width: 100%;
+    margin: 0 0 60px 0;
+    clear: both;
+    float: left;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-size: 20pt;
+    margin: 0 0 15px 0;
+  }
+  .half {
+    width: 100%;
+    @media screen and (min-width: $tabwidth) {
+      width: 48%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+  .desc {
+    width: 100%;
+    float: left;
+    p {
+      margin: 0 0 15px 0;
+    }
+  }
+}
+section.portfolio {
+  margin-top: 165px;
+}
+section.slider {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+section.press-awards {
+  h3 {
+    font-size: 18pt;
+  }
+  .press {
+    width: 100%;
+    float: left;
+    @media screen and (min-width: $tabwidth) {
+      width: 60%;
+    }
+
+    .image {
+      width: 45%;
+      float: left;
+      margin: 2%;
+      position: relative;
+
+      @media screen and (min-width: $tabwidth) {
+        width: 30%;
+        margin: 1.5%;
+      }
+      &:hover {
+        img {
+          opacity: .7;
+        }
+      }
+      img {
+        width: 100%;
+         @include transition(all ease .2s);
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        text-indent: -9000px;
+        
+      }
+    }
+  }
+  .awards {
+    width: 100%;
+    float: left;
+    @media screen and (min-width: $tabwidth) {
+      width: 35%;
+      float: right;
+    }
+
+    .award {
+      width: 100%;
+      float: left;
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid #ccc;
+      margin: 0 0 15px;
+      font-size: 11pt;
+      h4 {
+        font-size: 12pt;
+        margin: 0;
+      }
+    }
+  }
+}
+.contact-left, .contact-right {
+  width: 100%;
+  float: left;
+  @media screen and (min-width: $tabwidth) {
+    width: 48%;
+  }
+}
+.contact-left {
+
+}
+.contact-right {
+  float: right;
 }

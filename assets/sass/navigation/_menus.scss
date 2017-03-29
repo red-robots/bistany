@@ -1,14 +1,20 @@
 .main-navigation {
 	clear: both;
-	display: block;
+	position: relative;
+	z-index: 10000;
 	float: left;
 	width: 100%;
+	text-align: center;
 
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		@media screen and (min-width: $tabwidth) {
+			display: flex;
+			justify-content: space-between;
+		}
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -49,9 +55,22 @@
 		}
 	}
 	li {
-		float: left;
+		// float: left;
 		position: relative;
-
+		text-transform: uppercase;
+		font-size: 18px;
+		width: 100%;
+		text-align: center;
+		@media screen and (min-width: $tabwidth) {
+			width: auto;
+			font-size: 10px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 18px;
+		}
 		&:hover > a,
 		&.focus > a {
 		}
@@ -59,6 +78,11 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: rgba(#fff, 1);
+		padding: 10px 0;
+		@media screen and (min-width: $tabwidth) {
+			color: rgba($color-grey, 1);
+		}
 	}
 
 	.current_page_item > a,
@@ -72,7 +96,7 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-	// background-color: $color-green;
+	background-color: rgba($color-grey, 1);
 	ul.sub-menu {
 		background-color: rgba(255,255,255,.1);
 	}
@@ -85,7 +109,7 @@
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		// display: block;
 	}
 }
 button.menu-toggle {
@@ -95,6 +119,8 @@ button.menu-toggle {
 	color: #fff;
 	box-shadow: none;
 	width: auto;
+	position: relative;
+	z-index: 1002;
 	display: inline-block;
 	margin: 10px auto;
 	border-radius: 0;
@@ -130,7 +156,40 @@ button.menu-toggle {
 		width: 50%;
 	}
 }
-
+#work-navigation {
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	clear: both;
+	display: block;
+	ul {
+		margin: 0;
+		padding: 0;
+		width: auto;
+		position: relative;
+		display: inline-block;
+		
+		&::before {
+			width: 60%;
+			position: absolute;
+			top: 0;
+			left: 20%;
+			border-top: 1px solid  rgba($color-grey, 1);
+			content: '';
+		}
+	}
+	li {
+		display: inline-block;
+		font-size: 18px;
+		margin: 0 10px;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: rgba($color-grey, 1);
+		padding: 10px 0;
+	}
+}
 /***************** Menu *****************/
 
 #page-body-wrap .menu-bar {

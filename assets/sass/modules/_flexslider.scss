@@ -75,18 +75,9 @@ html[xmlns] .flexslider .slides {
  * DEFAULT THEME
  * ====================================================================================================================*/
 .flexslider {
-  margin: 0 0 60px;
-  background: #ffffff;
-  border: 4px solid #ffffff;
+  margin: 0 0 0px;
   position: relative;
   zoom: 1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 .flexslider .slides {
   zoom: 1;
@@ -124,7 +115,7 @@ html[xmlns] .flexslider .slides {
   margin: -20px 0 0;
   position: absolute;
   top: 50%;
-  z-index: 10;
+  z-index: 1000;
   overflow: hidden;
   opacity: 0;
   cursor: pointer;
@@ -201,8 +192,9 @@ html[xmlns] .flexslider .slides {
 .flex-control-nav {
   width: 100%;
   position: absolute;
-  bottom: -40px;
+  bottom: 40px;
   text-align: center;
+  z-index: 1000;
 }
 .flex-control-nav li {
   margin: 0 6px;

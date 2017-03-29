@@ -61,34 +61,80 @@ div {
 
 /* Logo */
 .logo , h1.logo {
-	width: 300px;
-	height: 200px;
-	background-image: url(images/logo.png);	
+	width: 250px;
+	height: 91px;
+	background: {
+    image: url(images/logo.png);  
+    size: cover;
+  }
 	margin: 10px auto;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
-		float: left;
-		margin: 0;
+		width: 250px;
+    height: 91px;
+	   margin: 10px auto 50px auto;
+	
 	}
 	@media screen and (min-width: $deskwidth) {
 		
 	}
 }
 .logo a, h1.logo a {
-	width: 300px;
-	height: 200px;
+	width: 250px;
+  height: 91px;
 	display: block;
 	text-indent: -9000px;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
+		width: 250px;
+    height: 91px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		
 	}
+}
+header#masthead {
+    float: right;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .9);
+    position: fixed;
+    width: 100%;
+    z-index: 1001;
+    top: 0;
+    right: 0;
+}
+.grad, .flex-grad {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(#fff,0);
+  z-index: 999;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+54&0+0,1+55,1+55,1+64 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+54&0.35+0,1+55,1+55,1+64 */
+background: -moz-linear-gradient(top,  rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.99) 54%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 64%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.35) 0%,rgba(255,255,255,0.99) 54%,rgba(255,255,255,1) 55%,rgba(255,255,255,1) 64%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,0.35) 0%,rgba(255,255,255,0.99) 54%,rgba(255,255,255,1) 55%,rgba(255,255,255,1) 64%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+.grad {
+  position: relative;
+  margin: 0;
+  @media screen and (min-width: $midwidth) {
+    margin: -100px 0 0 0;
+  }
+  @media screen and (min-width: $deskwidth) {
+    
+
+  }
+}
+.flex-grad {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  @media screen and (min-width: $tabwidth) {
+    display: block;
+  }
 }
 /***************** Footer *****************/
 
