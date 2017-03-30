@@ -25,7 +25,7 @@ if( $background_image_url != '') {
 			<h1><?php the_title(); ?></h1>
 		</header>
 
-		<section class="content">
+		<section class="content entry-content">
 			<?php the_content(); ?>
 		</section>
 
@@ -65,7 +65,7 @@ if( $background_image_url != '') {
 			<img src="<?php echo $afterthumb; ?>" alt="<?php echo $afterealt; ?>"  />
 		</div>
 		<?php if( $desc ) { ?>
-			<div class="desc"><?php echo $desc; ?></div>
+			<div class="desc entry-content"><?php echo $desc; ?></div>
 		<?php } ?>
 	</div>
 <?php endwhile; ?>

@@ -1284,6 +1284,7 @@ body{font-family:'Lato',sans-serif;font-weight:300;color:#353535}
 #tinymce p,#page-body-wrap p{font-family:'Lato',sans-serif;font-weight:300;color:#353535}
 section.content{width:100%;float:left;margin:0 0 40px 0}
 section.content p{margin:0 0 15px 0}
+.entry-content{font-size:16pt}
 html{box-sizing:border-box}
 *,*:before,*:after{box-sizing:inherit}
 body{background:rgba(255,255,255,0)}
@@ -1671,7 +1672,7 @@ section.before-after .left{float:left}
 section.before-after .right{float:right}
 section.before-after .desc{width:100%;float:left}
 section.before-after .desc p{margin:0 0 15px 0}
-section.portfolio{margin-top:165px}
+section.portfolio{margin-top:200px}
 section.slider{width:100%;float:left;clear:both}
 section.press-awards h3{font-size:18pt}
 section.press-awards .press{width:100%;float:left}
@@ -1688,3 +1689,11 @@ section.press-awards .awards .award h4{font-size:12pt;margin:0}
 .contact-left,.contact-right{width:100%;float:left}
 @media screen and (min-width:600px){.contact-left,.contact-right{width:48%}
 }.contact-right{float:right}
+section.people{width:100%;float:left}
+section.people .person{width:100%;margin:10px auto 30px auto;clear:both;float:left}
+section.people .person .image{width:80%;margin:10px auto}
+@media screen and (min-width:600px){section.people .person .image{width:20%;float:left;margin:0}
+}section.people .person .image img{width:100%}
+section.people .desc{width:100%;margin:0}
+@media screen and (min-width:600px){section.people .desc{width:75%;float:right}
+}

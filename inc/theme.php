@@ -35,12 +35,7 @@ add_filter('login_headerurl','loginpage_custom_link');
 ---------------------------------------*/
 if( function_exists('acf_add_options_page') ) {acf_add_options_page();}
 
-/*-------------------------------------
-  Hide Front End Admin Menu Bar
----------------------------------------*/
-if ( ! current_user_can( 'manage_options' ) ) {
-    show_admin_bar( false );
-}
+
  /*-------------------------------------
   Move Yoast to the Bottom
 ---------------------------------------*/
@@ -167,3 +162,8 @@ function ac_first_and_last_menu_class($items) {
   return $items;
 }
 add_filter('wp_nav_menu_objects', 'ac_first_and_last_menu_class');
+
+/*-------------------------------------
+  Don't show admin bar
+---------------------------------------*/
+show_admin_bar(false);

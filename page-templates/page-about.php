@@ -25,11 +25,40 @@ if( $background_image_url != '') {
 			<h1><?php the_title(); ?></h1>
 		</header>
 
-		<section class="content">
+		<section class="content entry-content">
 			<?php the_content(); ?>
 		</section>
 
 	<?php endwhile; ?>
+
+	<section class="people">
+		
+			<?php
+			$wp_query = new WP_Query();
+			$wp_query->query(array(
+				'post_type'=>'staff',
+				'posts_per_page' => -1,
+				'orderby' => 'menu_order', 
+				'order' => 'ASC'
+			));
+			if ($wp_query->have_posts()) : ?>
+		    <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
+		    $image = get_field('image');
+
+			$alt = $image['alt'];
+
+			$size = 'large';
+			$thumb = $image['sizes'][ $size ];
+		    ?>
+		    <div class="person">
+		    	<div class="image">
+		    		<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"  />
+		    	</div>
+		    	<div class="desc entry-content"><?php the_content(); ?></div>
+		    </div>	
+		    <?php endwhile; endif;  wp_reset_query(); ?>
+			
+	</section>
 
 <section class="press-awards">
 	<section class="press">
@@ -50,7 +79,7 @@ if( $background_image_url != '') {
 				<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"  />
 				<?php if( $pdf ) { ?><a href="<?php echo $pdf; ?>">view pdf</a><?php } ?>
 			</div>
-		<?php endwhile; endif; ?>
+		<?php endwhile; endif;  wp_reset_query(); ?>
 	</section>
 	<section class="awards">
 		<h3>Awards</h3>
@@ -61,11 +90,11 @@ if( $background_image_url != '') {
 	?>
 			<div class="award">
 				<?php if( $theTitle ) { ?><h4><?php echo $theTitle; ?></h4><?php } ?>
-				<?php if( $desc ) { ?><div class="desc"><?php echo $desc; ?></div><?php } ?>
+				<?php if( $desc ) { ?><div class="desc "><?php echo $desc; ?></div><?php } ?>
 				<?php if( $pdf ) { ?><div class="view"><a href="<?php echo $pdf; ?>">view pdf</a></div><?php } ?>
 			</div>
 			<!-- award -->
-	<?php endwhile; endif; ?>
+	<?php endwhile; endif; wp_reset_query(); ?>
 	</section>
 </section>
 

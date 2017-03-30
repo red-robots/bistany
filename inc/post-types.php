@@ -133,4 +133,40 @@ function js_custom_init()
   ); 
   register_post_type('press_awards',$args); // name used in query
   
+
+
+
+    $labels = array(
+   'name' => _x('Vendors', 'post type general name'),
+    'singular_name' => _x('Vendors', 'post type singular name'),
+    'add_new' => _x('Add New', 'Vendors'),
+    'add_new_item' => __('Add New Vendors'),
+    'edit_item' => __('Edit PVendors'),
+    'new_item' => __('New Vendors'),
+    'view_item' => __('View Vendors'),
+    'search_items' => __('Search Vendors'),
+    'not_found' =>  __('No Vendors found'),
+    'not_found_in_trash' => __('No Vendors found in Trash'), 
+    'parent_item_colon' => '',
+    'menu_name' => 'Vendors'
+  );
+  $args = array(
+   'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => array('slug' => 'press-awards'),
+    'capability_type' => 'post',
+    'has_archive' => false, 
+    'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
+    'menu_position' => 20,
+    'supports' => array('title','editor','custom-fields','thumbnail'),
+  
+  ); 
+  register_post_type('vendor',$args); // name used in query
+
+
+
   } // close custom post type

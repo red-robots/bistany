@@ -1113,7 +1113,7 @@ section.before-after {
   }
 }
 section.portfolio {
-  margin-top: 165px;
+  margin-top: 200px;
 }
 section.slider {
   width: 100%;
@@ -1196,4 +1196,36 @@ section.press-awards {
 }
 .contact-right {
   float: right;
+}
+section.people {
+  width: 100%;
+  float: left;
+
+  .person {
+    width: 100%;
+    margin: 10px auto 30px auto;
+    clear: both;
+    float: left;
+    
+    .image {
+      width: 80%;
+      margin: 10px auto;
+      @media screen and (min-width: $tabwidth) {
+        width: 20%;
+        float: left;
+        margin: 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .desc {
+    width: 100%;
+    margin: 0;
+    @media screen and (min-width: $tabwidth) {
+      width: 75%;
+      float: right;
+    }
+  }
 }

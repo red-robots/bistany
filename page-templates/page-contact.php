@@ -30,7 +30,7 @@ if( $background_image_url != '') {
 		</div>
 
 		<div class="contact-right">
-			<section class="content">
+			<section class="content entry-content">
 				<?php the_content(); ?>
 				<div class="map">
 					<?php the_field('map'); ?>
