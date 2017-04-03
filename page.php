@@ -26,7 +26,14 @@ if( $background_image_url != '') {
 		</header>
 
 		<section class="content entry-content">
-			<?php the_content(); ?>
+			<?php 
+
+			the_content(); 
+
+			if( is_page('sitemap') ) {
+				wp_nav_menu( array( 'theme_location' => 'sitemap') ); 
+			}
+			?>
 		</section>
 
 	<?php endwhile; ?>

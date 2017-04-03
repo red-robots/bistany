@@ -1,9 +1,39 @@
 .main-navigation {
-	clear: both;
 	position: relative;
+	width: 100%;
+	&.scrolled {
+		position: fixed;
+		top: 0;
+		left: 10%;
+		width: 80%;
+		background-color: rgba(#fff,.9);
+		li.fixed {
+			// hide on mobile
+			display: none;
+			@media screen and (min-width: $tabwidth) {
+				display: block;
+				width: 30px;
+				height: 30px;
+				text-indent: -90000px;
+				margin-top: 7px;
+				background: {
+					image: url(images/nav-logo.png);
+					repeat: no-repeat;
+					size: cover;
+				}
+			}
+		}
+	}
+	li.fixed {
+		display: none;
+	}
+}
+.main-navigation {
+	clear: both;
+	
 	z-index: 10000;
 	float: left;
-	width: 100%;
+	
 	text-align: center;
 
 	ul {
@@ -73,13 +103,15 @@
 		}
 		&:hover > a,
 		&.focus > a {
+			background-color: rgba(#fff, 1);
 		}
 	}
 	a {
 		display: block;
 		text-decoration: none;
 		color: rgba(#fff, 1);
-		padding: 10px 0;
+		padding: 10px 5px;
+		@include transition(all ease .2s);
 		@media screen and (min-width: $tabwidth) {
 			color: rgba($color-grey, 1);
 		}

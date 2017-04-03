@@ -68,7 +68,7 @@ $i=0;
 	<?php endif; wp_reset_query(); ?>
 
 
-<div class="primary">
+<div class="primary js-scroll-div">
 	<?php while(have_posts()) : the_post(); ?>
 		<header class="title">
 			<h1><?php the_title(); ?></h1>

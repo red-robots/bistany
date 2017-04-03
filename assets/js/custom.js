@@ -106,11 +106,21 @@ jQuery(document).ready(function ($) {
 
 	/*
 	*
-	*	Nice Page Scroll
+	*	Sticky Nav
 	*
 	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
+	var distance = $('.js-scroll-div').offset().top,
+    $window = $(window);
+
+	$window.scroll(function() {
+	    if ( $window.scrollTop() >= distance ) {
+	        // Your div has reached the top
+	        $('.js-main-nav').addClass('scrolled');
+	        $('#masthead').addClass('scrolled');
+	    } else {
+	    	$('.js-main-nav').removeClass('scrolled');
+	    	 $('#masthead').removeClass('scrolled');
+	    }
 	});
 	
 	

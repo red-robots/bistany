@@ -1,11 +1,62 @@
-			<footer>
-				<ul>
-<li><a title="Pinterest" href="https://www.pinterest.com/bistanydesign/" target="_blank">Pinterest</a></li>
-<li><a title="Houzz" href="http://www.houzz.com/pro/bistanydesign/bistany-design" target="_blank">Houzz</a></li>
-<li><a title="Contact Us" href="/contact-us">Contact</a></li>
-<li><a title="Terms &amp; Conditions" href="/terms-conditions">Terms &amp; Conditions</a></li>
-</ul>				<a class="back-to-top" href="#page-body-wrap">&#10094;</a>
-			</footer>
+<?php 
+$links = array();
+$sitemap_link = get_field('sitemap_link','option');
+$contact_link = get_field('contact_link','option');
+$terms_and_conditions_link = get_field('terms_and_conditions_link','option');
+$houzz_link = get_field('houzz_link','option');
+$pintrest_link = get_field('pintrest_link','option');
+$sitemap = array(
+		'link' => $sitemap_link,
+		'title' => 'sitemap', 
+		'wording' => 'Sitemap'
+	);
+$terms = array(
+		'link' => $terms_and_conditions_link,
+		'title' => 'terms', 
+		'wording' => 'Terms &amp; Conditions'
+	);
+$contact = array(
+		'link' => $contact_link,
+		'title' => 'contact', 
+		'wording' => 'Contact'
+	);
+$houzz = array(
+		'link' => $houzz_link,
+		'title' => 'houzz', 
+		'wording' => 'Houzz'
+	);
+$pintrest = array(
+		'link' => $pintrest_link,
+		'title' => 'pintrest', 
+		'wording' => 'Pintrest'
+	);
+if( $sitemap != '' ) {
+	$links[] = $sitemap;
+}
+if( $terms != '' ) {
+	$links[] = $terms;
+}
+if( $contact != '' ) {
+	$links[] = $contact;
+}
+if( $houzz != '' ) {
+	$links[] = $houzz;
+}
+if( $pintrest != '' ) {
+	$links[] = $pintrest;
+}
+ ?>
+<footer>
+	<ul>
+	<?php foreach( $links as $link ) { ?>
+	<li>
+		<a title="<?php echo $link['title'] ?>" href="<?php echo $link['link'] ?>"><?php echo $link['wording'] ?></a>
+	</li>
+	<?php } ?>
+	</ul>				
+
+<a class="back-to-top" href="#page-body-wrap">&#10094;</a>
+</footer>
 
 			
 

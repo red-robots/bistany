@@ -18,7 +18,7 @@ if( $background_image_url != '') {
 <div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
 
 <div class="grad"></div>
-<div class="primary <?php echo $theClass; ?>">
+<div class="primary <?php echo $theClass; ?> js-scroll-div">
 	<?php while(have_posts()) : the_post(); ?>
 		
 		<header class="title">
@@ -30,22 +30,88 @@ if( $background_image_url != '') {
 		</section>
 
 	<?php endwhile; ?>
-<section class="slider">
-    <?php $images = get_field('gallery');
-	    if( $images ): ?>
-	    <div id="slider" class="flexslider">
-	        <ul class="slides">
-	            <?php foreach( $images as $image ): ?>
-	                <li>
-	                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-	                </li>
-	            <?php endforeach; ?>
-	        </ul>
-	        <div class="flex-grad"></div>
-	    </div>
-	    
-	<?php endif; ?> 
-</section>
+
+	<section class="cta-show">
+		<div class="show">
+		<h3>See our Showroom Below</h3>
+			<div class="carrot">
+				<a href="#showroom">
+					<i class="fa fa-chevron-down" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+	
+	<?php
+	$i=0;
+	$wp_query = new WP_Query();
+	$wp_query->query(array(
+		'post_type'=>'vendor',
+		'posts_per_page' => -1, 
+		'orderby' => 'menu_order', 
+		'order' => 'ASC'
+	));
+	if ($wp_query->have_posts()) : ?>
+		<section class="vendors">
+		<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
+			$desc = get_field('description');
+			// set class to float right or left
+			if( $i == 2 ) {
+				$floatClass = 'last';
+				$i=0;
+			} else {
+				$floatClass = 'first';
+			}
+		?>
+			<div class="vendor-half <?php echo $floatClass; ?>">
+			<?php $images = get_field('gallery');
+			    if( $images ): ?>
+			<h3><?php the_title(); ?></h3>
+				
+			    <div id="slider" class="flexslider">
+			        <ul class="slides">
+			            <?php foreach( $images as $image ): ?>
+			                <li>
+			                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			                </li>
+			            <?php endforeach; ?>
+			        </ul>
+			        <div class="flex-grad"></div>
+			    </div>
+			    
+			<?php endif; ?> 
+				<?php if( $desc ) { ?>
+					<div class="desc">
+						<?php echo $desc; ?>
+					</div>
+				<?php } ?>
+			</div><!-- vendor half -->
+		<?php endwhile; ?>
+		</section>
+	<?php endif; 
+
+	wp_reset_query();
+
+	?>
+
+
+	<section class="slider" id="showroom">
+	<h2>Showroom</h2>
+	    <?php $images = get_field('gallery');
+		    if( $images ): ?>
+		    <div id="slider" class="flexslider">
+		        <ul class="slides">
+		            <?php foreach( $images as $image ): ?>
+		                <li>
+		                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		                </li>
+		            <?php endforeach; ?>
+		        </ul>
+		        <div class="flex-grad"></div>
+		    </div>
+		    
+		<?php endif; ?> 
+	</section>
 
 </div>
 <!-- primary -->

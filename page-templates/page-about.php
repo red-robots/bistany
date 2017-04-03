@@ -18,7 +18,7 @@ if( $background_image_url != '') {
 <div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
 
 <div class="grad"></div>
-<div class="primary <?php echo $theClass; ?>">
+<div class="primary <?php echo $theClass; ?> js-scroll-div">
 
 	<?php while(have_posts()) : the_post(); ?>
 		<header class="title">
@@ -30,6 +30,7 @@ if( $background_image_url != '') {
 		</section>
 
 	<?php endwhile; ?>
+
 
 	<section class="people">
 		

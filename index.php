@@ -13,7 +13,7 @@ get_header();
 
 <div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
 
-<div class="home-content">
+<div class="home-content js-scroll-div">
      <div class="intro-text">
 	  	<?php echo $content; ?>
      </div>

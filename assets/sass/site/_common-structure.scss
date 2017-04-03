@@ -26,7 +26,7 @@ div {
 		width: 100%;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
+		width: 80%;
 		padding: 0px;
 	}
 }
@@ -102,6 +102,10 @@ header#masthead {
     z-index: 1001;
     top: 0;
     right: 0;
+    &.scrolled {
+      position: relative;
+    }
+    
 }
 .grad, .flex-grad {
   width: 100%;
@@ -136,6 +140,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59ffffff', e
     display: block;
   }
 }
+// fixes for the small sliders
+.vendor-half {
+  & .flex-grad {
+    height: 50px;
+  }
+  & .flex-control-nav {
+    bottom: 15px;
+  }
+}
 /***************** Footer *****************/
 
 #page-body-wrap footer {
@@ -144,18 +157,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59ffffff', e
   padding-right: 10%;
   margin-bottom: 100px;
   padding-top: 100px;
+  text-align: center;
 }
 
 #page-body-wrap footer ul {
   list-style: none;
   padding-left: 0;
   word-spacing: -4px;
+  margin: 0;
+  padding: 0;
 }
 
 #page-body-wrap footer ul li {
   display: inline-block;
+  width: auto;
   border-collapse: 0;
-  width: 25%;
+  // width: 25%;
+  margin: 0 15px ;
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;

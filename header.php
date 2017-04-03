@@ -47,7 +47,7 @@
 <?php } ?>
 
 <div class="wrapper">
-    <nav id="site-navigation" class="main-navigation" role="navigation">
+    <nav id="site-navigation" class="main-navigation js-main-nav" role="navigation">
         <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
       </nav><!-- #site-navigation -->
@@ -61,7 +61,7 @@
         'order' => 'ASC'
       ));
         if ($wp_query->have_posts()) : ?>
-        <nav id="work-navigation" role="navigation">
+        <nav id="work-navigation" class=" " role="navigation">
           <ul>
           <?php while($wp_query->have_posts()) : $wp_query->the_post(); ?>
               <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
