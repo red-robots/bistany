@@ -58,7 +58,6 @@ if( $background_image_url != '') {
 			// set class to float right or left
 			if( $i == 2 ) {
 				$floatClass = 'last';
-				$i=0;
 			} else {
 				$floatClass = 'first';
 			}
@@ -86,6 +85,10 @@ if( $background_image_url != '') {
 					</div>
 				<?php } ?>
 			</div><!-- vendor half -->
+			<?php if( $i == 2 ) {
+				echo '<div class="clear"></div>';
+				$i=0;
+			} ?>
 		<?php endwhile; ?>
 		</section>
 	<?php endif; 
