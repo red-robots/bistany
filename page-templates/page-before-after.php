@@ -35,15 +35,19 @@ if( $background_image_url != '') {
 <?php
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
-	'post_type'=>'before_after',
-	'posts_per_page' => -1
-));
+		'post_type'=>'before_after',
+		'posts_per_page' => -1
+	));
 	if ($wp_query->have_posts()) : ?>
     
 <section class="before-after">
 	<?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
 			$before = get_field('before');
 			$after = get_field('after');
+
+			// echo '<pre>';
+			// print_r($before);
+			// echo '</pre>';
 
 			$beforealt = $before['alt'];
 			$afterealt = $after['alt'];

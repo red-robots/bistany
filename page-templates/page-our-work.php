@@ -18,17 +18,18 @@ get_header();
 
 
 <?php
-$i=0;
+	$i=0;
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
-	'post_type'=>'portfolio',
-	'posts_per_page' => -1, 
-	'orderby' => 'menu_order', 
-	'order' => 'ASC'
-));
+		'post_type'=>'portfolio',
+		'posts_per_page' => -1, 
+		'orderby' => 'menu_order', 
+		'order' => 'ASC'
+	));
+	
 	if ($wp_query->have_posts()) : ?>
     
-<div class="our-work">
+<div class="our-work ">
 	<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
 			$before = get_field('before');
 			$after = get_field('after');
@@ -55,7 +56,7 @@ $i=0;
 
 	
   <a href="<?php the_permalink(); ?>">
-    <div class="our-work-type <?php echo $postClass; ?>" style="background-image: url(<?php echo $bg; ?>);">
+    <div class="our-work-type <?php echo $postClass; ?> js-scroll-div" style="background-image: url(<?php echo $bg; ?>); ">
       <h3><?php the_title(); ?></h3>
     </div>
   </a>
@@ -74,7 +75,7 @@ $i=0;
 			<h1><?php the_title(); ?></h1>
 		</header>
 
-		<section class="content entry-content">
+		<section class=" entry-content work-content">
 			<?php the_content(); ?>
 		</section>
 

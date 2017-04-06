@@ -6,6 +6,7 @@ get_header();
    
     $background_image_url = get_field('featured_image');
     $content = get_the_content();
+    $introTitle = get_field('intro_title');
     $content = wpautop($content);
    
   wp_reset_postdata();
@@ -15,6 +16,7 @@ get_header();
 
 <div class="home-content js-scroll-div">
      <div class="intro-text">
+        <h3><?php echo $introTitle; ?></h3>
 	  	<?php echo $content; ?>
      </div>
      
@@ -55,6 +57,7 @@ get_header();
 
      <?php 
      endwhile;
+     
      endif;
      wp_reset_postdata(); ?>
 

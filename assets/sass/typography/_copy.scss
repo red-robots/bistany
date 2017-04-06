@@ -1,3 +1,6 @@
+body {
+    line-height: 1.8;
+}
 p {
 	margin-bottom: 1.5em;
 }
@@ -151,4 +154,9 @@ sup {
 
 sub {
     bottom: -0.25em;
+}
+header.title {
+    h1 {
+        font-size: 30pt;
+    }
 }

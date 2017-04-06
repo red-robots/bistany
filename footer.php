@@ -49,9 +49,9 @@ if( $pintrest != '' ) {
 <footer>
 	<ul>
 	<?php foreach( $links as $link ) { ?>
-	<li>
-		<a title="<?php echo $link['title'] ?>" href="<?php echo $link['link'] ?>"><?php echo $link['wording'] ?></a>
-	</li>
+		<li>
+			<a title="<?php echo $link['title'] ?>" href="<?php echo $link['link'] ?>"><?php echo $link['wording'] ?></a>
+		</li>
 	<?php } ?>
 	</ul>				
 

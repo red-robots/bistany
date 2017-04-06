@@ -43,7 +43,7 @@ if( $background_image_url != '') {
 	</section>
 	
 	<?php
-	$i=0;
+	$i = 0;
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
 		'post_type'=>'vendor',

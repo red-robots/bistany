@@ -46,10 +46,13 @@
     </div>
 <?php } ?>
 
-<div class="wrapper">
+
     <nav id="site-navigation" class="main-navigation js-main-nav" role="navigation">
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+      <div class="wrapper">
+         <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
+          <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+        </div>
+        <!-- wrapper -->
       </nav><!-- #site-navigation -->
       <?php if( is_single() && get_post_type() == 'portfolio') : 
         $i=0;
@@ -62,16 +65,17 @@
       ));
         if ($wp_query->have_posts()) : ?>
         <nav id="work-navigation" class=" " role="navigation">
+        <div class="wrapper">
           <ul>
           <?php while($wp_query->have_posts()) : $wp_query->the_post(); ?>
               <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
           <?php endwhile; ?>
           </ul>
+          </div>
         <?php endif; wp_reset_query(); ?>
       </nav><!-- #site-navigation -->
       <?php endif; ?>
-</div>
-<!-- wrapper -->
+
 </header>
 
 

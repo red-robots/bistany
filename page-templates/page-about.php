@@ -25,7 +25,7 @@ if( $background_image_url != '') {
 			<h1><?php the_title(); ?></h1>
 		</header>
 
-		<section class="content entry-content">
+		<section class="work-content entry-content">
 			<?php the_content(); ?>
 		</section>
 
@@ -55,7 +55,10 @@ if( $background_image_url != '') {
 		    	<div class="image">
 		    		<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"  />
 		    	</div>
-		    	<div class="desc entry-content"><?php the_content(); ?></div>
+		    	<div class="desc entry-content">
+		    	<h2><?php the_title(); ?></h2>
+		    		<?php the_content(); ?>
+		    	</div>
 		    </div>	
 		    <?php endwhile; endif;  wp_reset_query(); ?>
 			

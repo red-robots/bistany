@@ -20,6 +20,10 @@
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+  hyphens: none;
+  li {
+    hyphens: none;
+  }
 }
 
 .page-links {
@@ -38,9 +42,10 @@ body {
   background-color: rgba(#ffffff, 0);
 }
 
-// #page-body-wrap p {
-//   font-size: 16pt;
-// }
+#page-body-wrap p {
+  font-size: 16pt;
+  hyphens: none;
+}
 
 // #page-body-wrap a {
 //   font-size: 16pt;
@@ -168,7 +173,7 @@ input[type="submit"] {
     
   }
   &.first {
-    margin-right: 1%;
+    margin-right: 2%;
   }
   &.last {
 
@@ -180,6 +185,7 @@ input[type="submit"] {
     width: 100%;
     text-align: center;
     color: #fff;
+    font-size: 24pt;
   }
 }
 #page-body-wrap .our-work-kitchen {
@@ -292,7 +298,9 @@ input[type="submit"] {
   margin-top: 0;
   margin-bottom: 0;
 }
-
+.work-content {
+  margin-top: 70px;
+}
 #page-body-wrap .cabinetry-bg {
   background: url(images/cabinetry.jpg) no-repeat center center;
   -webkit-background-size: cover;
@@ -365,6 +373,9 @@ input[type="submit"] {
 #page-body-wrap .home-content .intro-text {
   margin-bottom: 100px;
   text-align: left;
+  h3 {
+    font-size: 22px;
+  }
 }
 
 #page-body-wrap .home-content a {
@@ -389,6 +400,7 @@ input[type="submit"] {
 #page-body-wrap .home-content a .home-left h3 {
   letter-spacing: 2px;
   margin-top: 345px;
+  font-size: 24pt;
 }
 
 #page-body-wrap .home-content a .home-right {
@@ -418,6 +430,7 @@ input[type="submit"] {
 #page-body-wrap .home-content a .home-right h3 {
   letter-spacing: 2px;
   margin-top: 140px;
+  font-size: 24pt;
 }
 
 #page-body-wrap .home-content a .home-right h3,
@@ -1091,7 +1104,7 @@ section.before-after {
   }
   h2 {
     text-transform: uppercase;
-    font-size: 20pt;
+    font-size: 27pt;
     margin: 0 0 15px 0;
   }
   .half {
@@ -1127,7 +1140,7 @@ section.slider {
 }
 section.press-awards {
   h3 {
-    font-size: 18pt;
+    font-size: 27pt;
   }
   .press {
     width: 100%;
@@ -1241,6 +1254,9 @@ section.people {
   .desc {
     width: 100%;
     margin: 0;
+    h2 {
+      margin: 0 0 .83em 0;
+    }
     @media screen and (min-width: $tabwidth) {
       width: 75%;
       float: right;
@@ -1282,6 +1298,9 @@ section.vendors {
   .vendor-half {
     width: 90%;
     margin: 0 auto;
+    h3 {
+      font-size: 27pt;
+    }
     @media screen and (min-width: $tabwidth) {
       width: 45%;
       &.first {
@@ -1291,5 +1310,14 @@ section.vendors {
         float: right;
       }
     }
+    .desc {
+      text-align: justify;
+      hyphens: none;
+    }
   }
+}
+section#showroom {
+    h2, h3 {
+      font-size: 27pt;
+    }
 }

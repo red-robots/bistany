@@ -39,7 +39,7 @@ jQuery(document).ready(function ($) {
 	
 	$('.flexslider').imagesLoaded( function() {
 		$('.flexslider').flexslider({
-			animation: "slide",
+			animation: "fade",
 			controlNav: true,
 			directionNav: true,
 			start: function(slider){
