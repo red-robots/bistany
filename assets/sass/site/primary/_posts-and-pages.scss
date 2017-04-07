@@ -1327,6 +1327,25 @@ section.vendors {
         float: right;
       }
     }
+
+    .viewsite {
+      width: auto;
+      float: left;
+      margin: 0;
+      position: relative;
+      padding: 0 30px 0 0;
+      i {
+        width: 10px;
+        position: absolute;
+        right: 5px;
+        top: 7px;
+      }
+      &:hover {
+        i {
+          right: 0;
+        }
+      }
+    }
     .desc {
       text-align: justify;
       hyphens: none;

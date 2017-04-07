@@ -59,6 +59,7 @@ if( $background_image_url != '') {
 			// video or gallery choice
 			$choice = get_field('gallery_or_video');
 			$video = get_field('video');
+			$weblink = get_field('website_link');
 			// set class to float right or left
 			if( $i == 2 ) {
 				$floatClass = 'last';
@@ -94,6 +95,11 @@ if( $background_image_url != '') {
 				<?php if( $desc ) { ?>
 					<div class="desc">
 						<?php echo $desc; ?>
+						<?php if( $weblink != '' ) { ?>
+							<div class="viewsite">
+								<a href="">VIEW SITE <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+							</div>
+						<?php } ?>
 					</div>
 				<?php } ?>
 			</div><!-- vendor half -->

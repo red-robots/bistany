@@ -1735,5 +1735,8 @@ section.vendors .vendor-half h3{font-size:27pt}
 @media screen and (min-width:600px){section.vendors .vendor-half{width:45%}
 section.vendors .vendor-half.first{float:left}
 section.vendors .vendor-half.last{float:right}
-}section.vendors .vendor-half .desc{text-align:justify;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
+}section.vendors .vendor-half .viewsite{width:auto;float:left;margin:0;position:relative;padding:0 30px 0 0}
+section.vendors .vendor-half .viewsite i{width:10px;position:absolute;right:5px;top:7px}
+section.vendors .vendor-half .viewsite:hover i{right:0}
+section.vendors .vendor-half .desc{text-align:justify;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
 section#showroom h2,section#showroom h3{font-size:27pt}
