@@ -97,7 +97,7 @@ if( $background_image_url != '') {
 						<?php echo $desc; ?>
 						<?php if( $weblink != '' ) { ?>
 							<div class="viewsite">
-								<a href="<?php echo $weblink; ?>">VIEW SITE <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+								<a href="<?php echo $weblink; ?>" target="_blank">VIEW SITE <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 							</div>
 						<?php } ?>
 					</div>
