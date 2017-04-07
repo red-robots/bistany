@@ -20,7 +20,10 @@ get_header();
         </ul>
         <div class="flex-grad"></div>
     </div>
-    
+    <div class="desc entry-content">
+    <h2><?php the_title(); ?></h2>
+        <?php the_content(); ?>
+    </div>
 <?php endif; ?> 
 
 <?php endwhile; endif; ?>
