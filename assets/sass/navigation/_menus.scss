@@ -197,6 +197,13 @@ button.menu-toggle {
 	text-transform: uppercase;
 	clear: both;
 	display: block;
+	&.scrolled {
+		position: fixed;
+		top: 52px;
+		left: 0;
+		width: 100%;
+		background-color: rgba(#fff,.9);
+	}
 	ul {
 		margin: 0;
 		padding: 0;

@@ -37,34 +37,18 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	
-	$('.flexslider').imagesLoaded( function() {
+	// $('.flexslider').imagesLoaded( function() {
 		$('.flexslider').flexslider({
 			animation: "fade",
 			controlNav: true,
 			directionNav: true,
+			slideshow: false,
 			start: function(slider){
 		        $('.flexslider').resize();
 		    }
 		}); // end register flexslider
-	});
-	 // The slider being synced must be initialized first
-	  // $('#carousel').flexslider({
-	  //   animation: "slide",
-	  //   controlNav: false,
-	  //   animationLoop: false,
-	  //   slideshow: false,
-	  //   itemWidth: 150,
-	  //   itemMargin: 5,
-	  //   asNavFor: '#slider'
-	  // });
-	 
-	  // $('#slider').flexslider({
-	  //   animation: "slide",
-	  //   controlNav: false,
-	  //   animationLoop: false,
-	  //   slideshow: false,
-	  //   sync: "#carousel"
-	  // });
+	// });
+
 	
 	/*
 	*
@@ -116,6 +100,7 @@ jQuery(document).ready(function ($) {
 	    if ( $window.scrollTop() >= distance ) {
 	        // Your div has reached the top
 	        $('.js-main-nav').addClass('scrolled');
+	        $('#work-navigation').addClass('scrolled');
 	        $('#masthead').addClass('scrolled');
 	    } else {
 	    	$('.js-main-nav').removeClass('scrolled');

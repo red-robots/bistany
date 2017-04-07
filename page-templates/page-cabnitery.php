@@ -55,11 +55,10 @@ if( $background_image_url != '') {
 		<section class="vendors">
 		<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
 			$desc = get_field('description');
-
-			// video or gallery choice
-			$choice = get_field('gallery_or_video');
-			$video = get_field('video');
 			$weblink = get_field('website_link');
+			// video or gallery choice
+			
+			
 			// set class to float right or left
 			if( $i == 2 ) {
 				$floatClass = 'last';
@@ -68,31 +67,38 @@ if( $background_image_url != '') {
 			}
 		?>
 			<div class="vendor-half <?php echo $floatClass; ?>">
-			<?php $images = get_field('gallery');
-
-			if( $choice == 'Gallery' ) :
-
-			    if( $images ): ?>
+			
 					<h3><?php the_title(); ?></h3>
 				
 				    <div id="slider" class="flexslider">
 				        <ul class="slides">
-				            <?php foreach( $images as $image ): ?>
+				            <?php if(have_rows('slider')) : while(have_rows('slider')) : the_row(); 
+
+				            		$image = get_sub_field('image');
+				            		$video = get_sub_field('video');
+				            		if( $image ) {
+				            			$alt = $image['alt'];
+										// thumbnail
+										$size = 'large';
+				            		}
+				            		
+
+				            ?>
 				                <li>
-				                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				                <?php if( $image != '' ) { ?>
+				                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" />
+				                <?php } elseif( $video  != '' ) { 
+				                	echo $video;
+				                 } else { echo ' ';} ?>
 				                </li>
-				            <?php endforeach; ?>
+				            <?php endwhile; endif; ?>
 				        </ul>
 				        <div class="flex-grad"></div>
 				    </div>
 			    
-			<?php endif; // endif image 
+			<?php 
 
-			else: // else show the video ?>
-				<h3><?php the_title(); ?></h3>
-				<?php the_field('video'); ?>
-			<?php endif; // endif is video ?> 
-				<?php if( $desc ) { ?>
+			 if( $desc ) { ?>
 					<div class="desc">
 						<?php echo $desc; ?>
 						<?php if( $weblink != '' ) { ?>

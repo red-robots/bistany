@@ -5,6 +5,7 @@ $contact_link = get_field('contact_link','option');
 $terms_and_conditions_link = get_field('terms_and_conditions_link','option');
 $houzz_link = get_field('houzz_link','option');
 $pintrest_link = get_field('pintrest_link','option');
+$phone_number = get_field('phone_number','option');
 $sitemap = array(
 		'link' => $sitemap_link,
 		'title' => 'sitemap', 
@@ -20,42 +21,52 @@ $contact = array(
 		'title' => 'contact', 
 		'wording' => 'Contact'
 	);
-$houzz = array(
-		'link' => $houzz_link,
-		'title' => 'houzz', 
-		'wording' => 'Houzz'
+$phone = array(
+		'link' => $phone_number,
+		'title' => $phone_number, 
+		'wording' => $phone_number
 	);
-$pintrest = array(
-		'link' => $pintrest_link,
-		'title' => 'pintrest', 
-		'wording' => 'Pintrest'
-	);
-if( $sitemap != '' ) {
-	$links[] = $sitemap;
+if( $contact != '' ) {
+	$links[] = $contact;
 }
 if( $terms != '' ) {
 	$links[] = $terms;
 }
-if( $contact != '' ) {
-	$links[] = $contact;
+if( $sitemap != '' ) {
+	$links[] = $sitemap;
 }
-if( $houzz != '' ) {
-	$links[] = $houzz;
-}
-if( $pintrest != '' ) {
-	$links[] = $pintrest;
-}
+
  ?>
-<footer>
+<footer class="site-footer">
+
+<section class="social">
+	<ul>
+		<?php if( $pintrest_link != '') { ?>
+			<li>
+				<a href="<?php echo $pintrest_link; ?>"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+			</li>
+		<?php } ?>
+		<?php if( $houzz_link != '') { ?>
+			<li>
+				<a href="<?php echo $houzz_link; ?>"><i class="fa fa-houzz" aria-hidden="true"></i></a>
+			</li>
+		<?php } ?>
+	</ul>
+</section>
+<section class="footer-info">
+	<div class="phone-number">
+		<?php echo $phone_number; ?>
+	</div>
 	<ul>
 	<?php foreach( $links as $link ) { ?>
 		<li>
 			<a title="<?php echo $link['title'] ?>" href="<?php echo $link['link'] ?>"><?php echo $link['wording'] ?></a>
 		</li>
 	<?php } ?>
-	</ul>				
+	</ul>	
+</section>			
 
-<a class="back-to-top" href="#page-body-wrap">&#10094;</a>
+
 </footer>
 
 			

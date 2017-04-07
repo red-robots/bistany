@@ -29,25 +29,33 @@
 
 
 
-<?php wp_head(); ?> 
+<?php wp_head(); 
+$postType = get_post_type();
+if( is_single() && $postType = 'portfolio') {
+  $navClass = 'scrolled';
+} else {
+  $navClass = '';
+}
+
+?> 
      </head>
      <body>
 <div id="page-body-wrap">
 
 
-<header id="masthead" class="site-header" role="banner">
+<header id="masthead" class="site-header <?php echo $navClass; ?>" role="banner">
 <?php if(is_home()) { ?>
-    <h1 class="logo">
+    <h1 class="logo ">
       <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
     </h1>
 <?php } else { ?>
-    <div class="logo">
+    <div class="logo <?php echo $navClass; ?>">
       <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
     </div>
 <?php } ?>
 
 
-    <nav id="site-navigation" class="main-navigation js-main-nav" role="navigation">
+    <nav id="site-navigation" class="main-navigation js-main-nav <?php echo $navClass; ?>" role="navigation">
       <div class="wrapper">
          <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
@@ -64,7 +72,7 @@
         'order' => 'ASC'
       ));
         if ($wp_query->have_posts()) : ?>
-        <nav id="work-navigation" class=" " role="navigation">
+        <nav id="work-navigation" class=" <?php echo $navClass; ?>" role="navigation">
         <div class="wrapper">
           <ul>
           <?php while($wp_query->have_posts()) : $wp_query->the_post(); ?>

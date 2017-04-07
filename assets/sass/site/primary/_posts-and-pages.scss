@@ -25,7 +25,12 @@
     hyphens: none;
   }
 }
-
+.entry-content {
+  text-align: justify;
+  img {
+    width: 100%;
+  }
+}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -1148,7 +1153,7 @@ section.before-after {
   }
 }
 section.portfolio {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 section.slider {
   width: 100%;
@@ -1226,10 +1231,10 @@ section.press-awards {
     width: 48%;
   }
   input[type="submit"] {
-    background-color: $color-grey;
-    color: #fff;
+    // background-color: $color-grey;
+    // color: #fff;
     box-shadow: none;
-    border-radius: 0;
+    // border-radius: 0;
   }
 }
 .contact-left {
@@ -1240,8 +1245,40 @@ section.press-awards {
   .map {
     width: 80%;
     margin: 10px auto;
+    @media screen and (min-width: $tabwidth) {
+       width: 100%;
+    }
     iframe {
       max-width: 100%;
+    }
+  }
+}
+section.contact-info {
+  width: 100%;
+  float: left;
+  margin: 0 0 30px 0;
+  .row {
+    width: 100%;
+    float: left;
+  }
+  .first-col {
+    width: 100%;
+    float: left;
+    @media screen and (min-width: $tabwidth) {
+      width: 30%;
+    }
+    @media screen and (min-width: $deskwidth) {
+       width: 20%;
+    }
+  }
+  .last-col {
+    width: 100%;
+    float: right;
+    @media screen and (min-width: $tabwidth) {
+       width: 65%;
+    }
+    @media screen and (min-width: $deskwidth) {
+      width: 75%;
     }
   }
 }
@@ -1356,4 +1393,60 @@ section#showroom {
     h2, h3 {
       font-size: 27pt;
     }
+}
+section.social {
+  width: 100%;
+  text-align: center;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+  }
+  a {
+    display: block;
+    color: $color-grey;
+    &:hover {
+      i {
+        transform: scale(1.2);
+      }
+    }
+  }
+  i {
+    font-size: 20pt;
+  }
+}
+
+section.footer-info {
+  width: 100%;
+  margin: 30px auto;
+  clear: both;
+  float: left;
+  text-align: center;
+  .phone-number {
+    width: auto;
+    text-align: center;
+    a {
+      color: $color-grey;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    width: auto;
+    display: inline-block;
+    margin: 0 20px;
+  }
+  a {
+    color: $color-grey;
+    &:hover {
+      // transform: scale(1.1);
+    }
+  }
 }
