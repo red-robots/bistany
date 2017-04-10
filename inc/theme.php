@@ -14,9 +14,9 @@ function my_login_logo() { ?>
 <style type="text/css">
   body.login div#login h1 a {
   	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-  	background-size: 327px 67px;
-  	width: 327px;
-  	height: 67px;
+  	background-size: 250px 91px;
+  	width: 250px;
+  	height: 91px;
   }
 </style>
 <?php }

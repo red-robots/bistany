@@ -5,7 +5,11 @@ get_header();
 <div class="wrapper">
 
 <section class="portfolio  js-scroll-div">
-<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+<?php if( have_posts() ) : while( have_posts() ) : the_post(); 
+
+$desc = get_field('description');
+
+?>
 
 
     <?php $images = get_field('gallery');
@@ -22,7 +26,7 @@ get_header();
     </div>
     <div class="desc entry-content">
     <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
+        <?php echo $desc; ?>
     </div>
 <?php endif; ?> 
 

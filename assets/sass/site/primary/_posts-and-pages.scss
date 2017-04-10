@@ -70,6 +70,7 @@ body {
 #page-body-wrap p {
   font-size: 16pt;
   hyphens: none;
+  text-align: justify;
 }
 
 // #page-body-wrap a {
@@ -406,6 +407,10 @@ input[type="submit"] {
 #page-body-wrap .home-content a {
   text-decoration: none;
   color: #fff;
+  text-align: center;
+  p {
+    text-align: center;
+  }
 }
 
 #page-body-wrap .home-content a .home-left {
@@ -469,7 +474,7 @@ input[type="submit"] {
 
 #page-body-wrap .kitchen {
   // background-image: url(images/kitchen-bg.jpg);
-
+  text-align: center;
   background-position: center;
   background-size: cover;
 }

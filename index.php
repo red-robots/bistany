@@ -36,6 +36,7 @@ get_header();
     $thumb_id = get_post_thumbnail_id();
 	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
 	$thumb_url = $thumb_url_array[0];
+    $homepage_teaser_text = get_field('homepage_teaser_text');
     
     if( $id == 13 ) {
     	$class = 'kitchen home-left';
@@ -51,7 +52,7 @@ get_header();
      <a href="<?php the_permalink(); ?>">
 	  <div class="<?php echo $class; ?>" style="background-image: url(<?php echo $thumb_url; ?>);">
 	       <h3><?php the_title(); ?></h3>
-	       <p><?php the_content(); ?></p>
+	       <p><?php echo $homepage_teaser_text; ?></p>
 	  </div>
      </a>
 
