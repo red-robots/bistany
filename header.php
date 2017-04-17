@@ -9,10 +9,6 @@
 	  <link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet'>
     <link type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" />
     <link type="text/css" href="<?php bloginfo('template_url'); ?>/menu.css" rel="stylesheet" />
-	  <!-- <link type="text/css" href="/packages/bistany/themes/bistany/css/normalize.css" rel="stylesheet" />
-	  <link type="text/css" href="/files/cache/css/bistany/typography.css" rel="stylesheet" media="all" />
-	  <link type="text/css" href="/packages/bistany/themes/bistany/css/all.css" rel="stylesheet" />
-	  <link type="text/css" href="/packages/bistany/themes/bistany/css/menu.css" rel="stylesheet" /> -->
 	  
 	  
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -21,11 +17,13 @@
 <meta name="generator" content="concrete5 - 5.6.3.3" />
 
 
-	<link rel="shortcut icon" href="/files/6514/4441/6260/favicon.ico" type="image/x-icon" />
-	<link rel="icon" href="/files/6514/4441/6260/favicon.ico" type="image/x-icon" />
-<!-- <link rel="stylesheet" type="text/css" href="/concrete/css/ccm.base.css" /> -->
-<!-- <script type="text/javascript" src="/concrete/js/jquery.js"></script>
-<script type="text/javascript" src="/concrete/js/ccm.base.js"></script> -->
+	
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/images/favicon/manifest.json">
+<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
 
 
 

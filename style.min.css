@@ -1319,6 +1319,7 @@ a:active,a:hover{outline:0}
 .main-navigation.scrolled{position:fixed;top:0;left:0;width:100%;background-color:rgba(255,255,255,0.9)}
 .main-navigation.scrolled li.fixed{display:none}
 .main-navigation.scrolled li.fixed a{padding:0}
+.main-navigation.scrolled li.fixed a:hover{background-color:rgba(255,255,255,0)}
 @media screen and (min-width:600px){.main-navigation.scrolled li.fixed{display:block;width:30px;height:30px;text-indent:-90000px;margin-top:10px;background-image:url(images/nav-logo.png);background-repeat:no-repeat;background-size:cover}
 }.main-navigation li.fixed{display:none}
 .main-navigation{clear:both;z-index:10000;float:left;text-align:center}

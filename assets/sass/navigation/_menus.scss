@@ -12,6 +12,9 @@
 			display: none;
 			a {
 				padding: 0;
+				&:hover {
+					background-color: rgba(#fff, 0);
+				}
 			}
 			@media screen and (min-width: $tabwidth) {
 				display: block;
