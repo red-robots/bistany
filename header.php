@@ -12,9 +12,7 @@
 	  
 	  
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title>Award Winning Custom Cabinetry Designer in Charlotte NC</title>
-<meta name="description" content="Cabinetry Designed Around You! Let our high-end custom cabinetry design team create the perfect place for your family to live and play together." />
-<meta name="generator" content="concrete5 - 5.6.3.3" />
+
 
 
 	

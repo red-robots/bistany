@@ -57,6 +57,7 @@ div {
 	width: 250px;
 	height: 91px;
   @include transition(all .2s ease);
+  margin: 10px auto;
   &.scrolled {
     display: none;
     // height: 0;
@@ -66,18 +67,19 @@ div {
     image: url(images/logo.png);  
     size: cover;
   }
-	margin: 10px auto;
+	
 
 	@media screen and (min-width: $tabwidth) {
 		width: 250px;
     height: 91px;
-	   margin: 10px auto 50px auto;
+	 margin: 10px auto 50px auto;
 	
 	}
 	@media screen and (min-width: $deskwidth) {
 		
 	}
 }
+
 .logo a, h1.logo a {
 	width: 250px;
   height: 91px;
@@ -286,11 +288,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59ffffff', e
 
 
 @media (max-width: 768px) {
-  #page-body-wrap .background-image {
-    background-attachment: scroll;
-    background-size:contain;
-    max-height:298px !important;
-  }
+  // #page-body-wrap .background-image {
+  //   background-attachment: scroll;
+  //   background-size:contain;
+  //   max-height:298px !important;
+  // }
   #page-body-wrap .header-logo img {
     float: left !important;
     width: 100px;
