@@ -120,20 +120,28 @@ jQuery(document).ready(function ($) {
 	*	Sticky Nav
 	*
 	------------------------------------*/
-	var distance = $('.js-scroll-div').offset().top,
-    $window = $(window);
+	
+		if(window.location.href.indexOf("portfolio") > -1) {
+			
+		} else {
+			var distance = $('.js-scroll-div').offset().top,
+		    $window = $(window);
 
-	$window.scroll(function() {
-	    if ( $window.scrollTop() >= distance ) {
-	        // Your div has reached the top
-	        $('.js-main-nav').addClass('scrolled');
-	        $('#work-navigation').addClass('scrolled');
-	        $('#masthead').addClass('scrolled');
-	    } else {
-	    	$('.js-main-nav').removeClass('scrolled');
-	    	 $('#masthead').removeClass('scrolled');
-	    }
-	});
+			$window.scroll(function() {
+			    if ( $window.scrollTop() >= distance ) {
+			        // Your div has reached the top
+			        $('.js-main-nav').addClass('scrolled');
+			        $('.logo').addClass('scrolled');
+			        $('#work-navigation').addClass('scrolled');
+			        $('#masthead').addClass('scrolled');
+			    } else {
+			    	$('.js-main-nav').removeClass('scrolled');
+			    	 $('#masthead').removeClass('scrolled');
+			    	 $('.logo').removeClass('scrolled');
+			    }
+			});
+		}
+	
 	
 	
 	/*

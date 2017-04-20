@@ -102,36 +102,36 @@ function js_custom_init()
   register_post_type('staff',$args); // name used in query
 
 
-    $labels = array(
-   'name' => _x('Press & Awards', 'post type general name'),
-    'singular_name' => _x('Press & Awards', 'post type singular name'),
-    'add_new' => _x('Add New', 'Press & Awards'),
-    'add_new_item' => __('Add New Press & Awards'),
-    'edit_item' => __('Edit Press & Awards'),
-    'new_item' => __('New Press & Awards'),
-    'view_item' => __('View Press & Awards'),
-    'search_items' => __('Search Press & Awards'),
-    'not_found' =>  __('No Press & Awards found'),
-    'not_found_in_trash' => __('No Press & Awards found in Trash'), 
-    'parent_item_colon' => '',
-    'menu_name' => 'Press & Awards'
-  );
-  $args = array(
-   'labels' => $labels,
-    'public' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true, 
-    'show_in_menu' => true, 
-    'query_var' => true,
-    'rewrite' => array('slug' => 'press-awards'),
-    'capability_type' => 'post',
-    'has_archive' => false, 
-    'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
-    'menu_position' => 20,
-    'supports' => array('title','editor','custom-fields','thumbnail'),
+  //   $labels = array(
+  //  'name' => _x('Press & Awards', 'post type general name'),
+  //   'singular_name' => _x('Press & Awards', 'post type singular name'),
+  //   'add_new' => _x('Add New', 'Press & Awards'),
+  //   'add_new_item' => __('Add New Press & Awards'),
+  //   'edit_item' => __('Edit Press & Awards'),
+  //   'new_item' => __('New Press & Awards'),
+  //   'view_item' => __('View Press & Awards'),
+  //   'search_items' => __('Search Press & Awards'),
+  //   'not_found' =>  __('No Press & Awards found'),
+  //   'not_found_in_trash' => __('No Press & Awards found in Trash'), 
+  //   'parent_item_colon' => '',
+  //   'menu_name' => 'Press & Awards'
+  // );
+  // $args = array(
+  //  'labels' => $labels,
+  //   'public' => true,
+  //   'publicly_queryable' => true,
+  //   'show_ui' => true, 
+  //   'show_in_menu' => true, 
+  //   'query_var' => true,
+  //   'rewrite' => array('slug' => 'press-awards'),
+  //   'capability_type' => 'post',
+  //   'has_archive' => false, 
+  //   'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
+  //   'menu_position' => 20,
+  //   'supports' => array('title','editor','custom-fields','thumbnail'),
   
-  ); 
-  register_post_type('press_awards',$args); // name used in query
+  // ); 
+  // register_post_type('press_awards',$args); // name used in query
   
 
 

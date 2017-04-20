@@ -1,12 +1,20 @@
 .main-navigation {
 	position: relative;
 	width: 100%;
+	@include transition(all .2s ease);
+	@media screen and (min-width: $tabwidth) {
+		position: absolute;
+		bottom: 0px;
+	}
 	&.scrolled {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		background-color: rgba(#fff,.9);
+		// position: fixed;
+		@media screen and (min-width: $tabwidth) {
+			// top: 0;
+			// left: 0;
+			width: 100%;
+			background-color: rgba(#fff,.9);
+		}
+		
 		li.fixed {
 			// hide on mobile
 			display: none;
@@ -31,7 +39,7 @@
 		}
 	}
 	li.fixed {
-		display: none;
+		// display: none;
 	}
 }
 .main-navigation {
@@ -201,11 +209,18 @@ button.menu-toggle {
 	clear: both;
 	display: block;
 	&.scrolled {
-		position: fixed;
-		top: 52px;
+		
+		background-color: rgba(#fff,.9);
+		@media screen and (min-width: $tabwidth) {
+			top: 25px;
+			position: fixed;
+		// top: 52px;
 		left: 0;
 		width: 100%;
-		background-color: rgba(#fff,.9);
+		}
+		@media screen and (min-width: $deskwidth) {
+			top: 52px;
+		}
 	}
 	ul {
 		margin: 0;
@@ -215,19 +230,27 @@ button.menu-toggle {
 		display: inline-block;
 		
 		&::before {
-			width: 60%;
-			position: absolute;
-			top: 0;
-			left: 20%;
-			border-top: 1px solid  rgba($color-grey, 1);
-			content: '';
+			
+			@media screen and (min-width: $tabwidth) {
+				width: 60%;
+				position: absolute;
+				top: 0;
+				left: 20%;
+				border-top: 1px solid  rgba($color-grey, 1);
+				content: '';
+			}
 		}
 	}
 	li {
 		display: inline-block;
-		font-size: 18px;
+		font-size: 12px;
+		margin: 0 10px;
 		@media screen and (min-width: $tabwidth) {
 			margin: 0 40px;
+			font-size: 14px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 18px;
 		}
 	}
 	a {

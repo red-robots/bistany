@@ -184,11 +184,13 @@ input[type="submit"] {
 }
 .our-work-type {
   width: 100%;
-  height: 50vh;
-  align-items: center;
-  display: flex;
+  height: 25vh;
+  
   @media screen and (min-width: $tabwidth) {
     height: 100%;
+    // height: 50vh;
+    align-items: center;
+    display: flex;
     position: relative;
     width: 32%;
     float: left;
@@ -199,10 +201,16 @@ input[type="submit"] {
     
   }
   &.first {
-    margin-right: 2%;
+    margin: 10 auto;
+    @media screen and (min-width: $tabwidth) {
+      margin: 0 2% 0 0;
+    }
   }
   &.last {
-
+    margin: 10 auto;
+    @media screen and (min-width: $tabwidth) {
+      margin: 0 0% 0 0;
+    }
   }
   &:hover {
      transform: scale(.95);
@@ -325,7 +333,7 @@ input[type="submit"] {
   margin-bottom: 0;
 }
 .work-content {
-  margin-top: 70px;
+  margin: 70px 0 30px 0;
 }
 #page-body-wrap .cabinetry-bg {
   background: url(images/cabinetry.jpg) no-repeat center center;
@@ -414,37 +422,54 @@ input[type="submit"] {
 }
 
 #page-body-wrap .home-content a .home-left {
-  float: left;
-  margin-left: 0;
-  margin-right: 2%;
-  width: 48%;
-  height: 800px;
+  
+  margin: 10px auto;
+  width: 90%;
+  
   opacity: .75;
   -webkit-transition: .25s;
   -moz-transition: .25s;
   -o-transition: .25s;
   -ms-transition: .25s;
   transition: .25s;
+  height: 375px;
+  @media screen and (min-width: $tabwidth) {
+    width: 48%;
+    margin-left: 0;
+    margin-right: 2%;
+    height: 800px;
+    float: left;
+    margin: 0 2% 0px 0;
+  }
 }
 
 #page-body-wrap .home-content a .home-left h3 {
   letter-spacing: 2px;
-  margin-top: 345px;
+  margin-top: 35px;
   font-size: 24pt;
+  @media screen and (min-width: $tabwidth) {
+    margin-top: 345px;
+  }
 }
 
 #page-body-wrap .home-content a .home-right {
-  float: right;
-  margin-right: 0;
-  margin-left: 2%;
-  width: 48%;
-  height: 375px;
+   margin: 10px auto;
+  width: 90%;
   opacity: .75;
+  height: 375px;
   -webkit-transition: .25s;
   -moz-transition: .25s;
   -o-transition: .25s;
   -ms-transition: .25s;
   transition: .25s;
+   @media screen and (min-width: $tabwidth) {
+    float: right;
+    // margin-right: 0;
+    // margin-left: 2%;
+    width: 48%;
+    height: 375px;
+    margin: 0 0 50px 2%;
+   }
 }
 
 #page-body-wrap .home-content a .home-right:hover,
@@ -459,8 +484,11 @@ input[type="submit"] {
 
 #page-body-wrap .home-content a .home-right h3 {
   letter-spacing: 2px;
-  margin-top: 140px;
+  margin-top: 35px;
   font-size: 24pt;
+  @media screen and (min-width: $tabwidth) {
+    margin-top: 140px;
+  }
 }
 
 #page-body-wrap .home-content a .home-right h3,
@@ -1122,7 +1150,11 @@ h2#dutchmade, h2#bentwood, h2#elmwood {
   margin-left: .5%;
   margin-right: .5%;
 }
-
+section.home-bottom {
+  width: 100%;
+  float: left;
+  margin: 30px 0 0 0;
+}
 section.before-after {
   width: 100%;
   float: left;
@@ -1171,6 +1203,9 @@ section.slider {
 section.press-awards {
   h3 {
     font-size: 27pt;
+  }
+  .view {
+    font-size: 16pt;
   }
   .press {
     width: 100%;
@@ -1379,11 +1414,16 @@ section.vendors {
       margin: 0;
       position: relative;
       padding: 0 30px 0 0;
+      font-size: 16pt;
+      text-transform: capitalize;
+      a {
+        color: #0999f3;
+      }
       i {
         width: 10px;
         position: absolute;
         right: 5px;
-        top: 7px;
+        top: 9px;
       }
       &:hover {
         i {
@@ -1410,9 +1450,10 @@ section.social {
     padding: 0;
   }
   li {
-    width: 30px;
+    width: auto;
     height: 30px;
     display: inline-block;
+    margin: 0 15px;
   }
   a {
     display: block;
@@ -1422,6 +1463,11 @@ section.social {
         transform: scale(1.2);
       }
     }
+  }
+  .social-name {
+    font-size: 14px;
+    // margin-top: -8px;
+    display: block;
   }
   i {
     font-size: 20pt;

@@ -7,6 +7,8 @@ get_header();
     $background_image_url = get_field('featured_image');
     $content = get_the_content();
     $introTitle = get_field('intro_title');
+    $sectionTitle = get_field('section_title');
+    $bisDif = get_field('bistany_difference');
     $content = wpautop($content);
    
   wp_reset_postdata();
@@ -62,7 +64,14 @@ get_header();
      endif;
      wp_reset_postdata(); ?>
 
+     <section class="home-bottom">
+         <div class="intro-text">
+            <h3><?php echo $sectionTitle; ?></h3>
+            <?php echo $bisDif; ?>
+         </div>
+     </section>
      
+
 </div>
 
 <?php  get_footer(); ?>

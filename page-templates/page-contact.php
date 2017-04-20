@@ -12,6 +12,7 @@ $phone = get_field('phone_number', 'option');
 $email = get_field('email', 'option');
 $address = get_field('address', 'option');
 $spambot = antispambot($email);
+$showroom = get_field('showroom_notice');
 if( $background_image_url != '') {
 	$theClass = 'with-feat-image';
 } else {
@@ -56,7 +57,14 @@ if( $background_image_url != '') {
 						</div>
 					<?php } ?>
 				</section>
-				<?php the_field('showroom_notice'); ?>
+				<section class="contact-info">
+					<?php if($showroom) { ?>
+						<div class="row">
+							<div class="first-col">Showroom: </div>
+							<div class="last-col"><?php echo $showroom; ?></div>
+						</div>
+					<?php } ?>
+				</section>
 				<div class="map">
 					<?php the_field('map'); ?>
 				</div>

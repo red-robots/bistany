@@ -56,7 +56,12 @@ div {
 .logo , h1.logo {
 	width: 250px;
 	height: 91px;
-  &.scrolled {display: none;}
+  @include transition(all .2s ease);
+  &.scrolled {
+    display: none;
+    // height: 0;
+    // margin: 0;
+  }
 	background: {
     image: url(images/logo.png);  
     size: cover;
@@ -88,16 +93,26 @@ div {
 	}
 }
 header#masthead {
-    float: right;
+    // float: right;
     background-color: #fff;
     background-color: rgba(255, 255, 255, .9);
-    position: fixed;
-    width: 100%;
-    z-index: 1001;
-    top: 0;
-    right: 0;
+    
+    @include transition(all .2s ease);
+    @media screen and (min-width: $tabwidth) {
+      height: 203px;
+      position: fixed;
+      width: 100%;
+      z-index: 1001;
+      top: 0;
+      right: 0;
+    }
+    
     &.scrolled {
-      position: relative;
+      // position: relative;
+      @include transition(all .2s ease);
+       @media screen and (min-width: $tabwidth) {
+        height: 52px;
+      }
     }
     
 }
@@ -245,7 +260,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59ffffff', e
 @media (max-width: 967px) {
   #page-body-wrap footer ul li {
     width: 100%;
-    margin-bottom: 50px;
+    margin: 0px;
   }
   #page-body-wrap .our-work-kitchen h3,
   #page-body-wrap .our-work-bath h3,

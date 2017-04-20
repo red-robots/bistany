@@ -26,6 +26,9 @@ $phone = array(
 		'title' => $phone_number, 
 		'wording' => $phone_number
 	);
+if( $phone != '' ) {
+	$links[] = $phone;
+}
 if( $contact != '' ) {
 	$links[] = $contact;
 }
@@ -43,20 +46,23 @@ if( $sitemap != '' ) {
 	<ul>
 		<?php if( $pintrest_link != '') { ?>
 			<li>
-				<a href="<?php echo $pintrest_link; ?>"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+				<a href="<?php echo $pintrest_link; ?>" target="_blank">
+				<i class="fa fa-pinterest" aria-hidden="true"></i>
+				<span class="social-name">Pinterest</span>
+				</a>
 			</li>
 		<?php } ?>
 		<?php if( $houzz_link != '') { ?>
 			<li>
-				<a href="<?php echo $houzz_link; ?>"><i class="fa fa-houzz" aria-hidden="true"></i></a>
+				<a href="<?php echo $houzz_link; ?>" target="_blank">
+				<i class="fa fa-houzz" aria-hidden="true"></i>
+				<span class="social-name">Houzz</span>
+				</a>
 			</li>
 		<?php } ?>
 	</ul>
 </section>
 <section class="footer-info">
-	<div class="phone-number">
-		<?php echo $phone_number; ?>
-	</div>
 	<ul>
 	<?php foreach( $links as $link ) { ?>
 		<li>
@@ -73,46 +79,6 @@ if( $sitemap != '' ) {
 
 		</div>
 		<?php wp_footer(); ?>
-		<script type="text/javascript">
-						/*
-			$(document).ready(function() {
-				$('.info').click(function() {
-					$(this).find('.personal-bio').show();
-				});
-
-				$('.info').click(function(){
-					$('.personal-bio').addClass('personalbio-show');
-					var $profileContainer = $('.profile-section');
-
-					 $('body').animate({
-			        scrollTop: $profileContainer.offset().top - 1000
-			    }, 'fast');
-				});
-				$('.click-to-close').click(function(){
-					$('.personal-bio').addClass('personalbio-hide');
-				});
-			}); */
-		</script>
-		<script src="<?php bloginfo('template_url'); ?>/js/menu.js"></script>
-		<script>
-
-			/**
-			* Slide right instantiation and action.
-			*/
-			var slideRight = new Menu({
-			wrapper: '#o-wrapper',
-			type: 'slide-right',
-			menuOpenerClass: '.c-button',
-			maskId: '#c-mask'
-			});
-
-			var slideRightBtn = document.querySelector('#c-button--slide-right');
-
-			slideRightBtn.addEventListener('click', function(e) {
-			e.preventDefault;
-			slideRight.open();
-			});
-
-			</script>
+		
 	</body>
 </html>
