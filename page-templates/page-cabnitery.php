@@ -56,9 +56,15 @@ if( $background_image_url != '') {
 		<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
 			$desc = get_field('description');
 			$weblink = get_field('website_link');
+
 			// video or gallery choice
 			
-			
+			$upload_dir = wp_upload_dir();
+			$video = $upload_dir['baseurl'].'/Harmoni-Kitchens-HD.mp4';
+			$ID = get_the_ID();
+			// echo '<pre>';
+			// print_r($video);
+			// echo '</pre>';
 			// set class to float right or left
 			if( $i == 2 ) {
 				$floatClass = 'last';
@@ -72,10 +78,21 @@ if( $background_image_url != '') {
 				
 				    <div id="slider" class="flexslider">
 				        <ul class="slides">
+
+				        	<?php if( $ID == 209 ) { // if is the Harmoni ?>
+				                <li>
+				                	<video  controls>
+									  <source src="<?php echo $video; ?>" type="video/mp4">
+									  <source src="<?php echo $video; ?>" type="video/ogg">
+									Your browser does not support the video tag.
+									</video>
+								</li>
+							<?php } else { ?>
+
 				            <?php if(have_rows('slider')) : while(have_rows('slider')) : the_row(); 
 
 				            		$image = get_sub_field('image');
-				            		$video = get_sub_field('video');
+				            		$videoUpload = get_sub_field('video');
 				            		if( $image ) {
 				            			$alt = $image['alt'];
 										// thumbnail
@@ -85,15 +102,20 @@ if( $background_image_url != '') {
 
 				            ?>
 				                <li>
+				                <?php //echo $ID; ?>
 				                <?php if( $image != '' ) { ?>
 				                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" />
-				                <?php } elseif( $video  != '' ) { 
-				                	echo $video;
+				                <?php } elseif( $videoUpload  != '' ) { 
+				                	echo $videoUpload;
+				                	
 				                 } else { echo ' ';} ?>
+				                }
 				                </li>
-				            <?php endwhile; endif; ?>
+				            <?php endwhile; endif; } ?>
 				        </ul>
-				        <div class="flex-grad"></div>
+				        <?php if( $ID != 209 ) { // if is the Harmoni ?>
+				        	<div class="flex-grad"></div>
+				        <?php } ?>
 				    </div>
 			    
 			<?php 

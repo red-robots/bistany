@@ -39,7 +39,9 @@
 		}
 	}
 	li.fixed {
-		// display: none;
+		@media screen and (min-width: $tabwidth) {
+			display: none;
+		}
 	}
 }
 .main-navigation {

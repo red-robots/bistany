@@ -1214,8 +1214,14 @@ section.before-after {
     }
   }
 }
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
 section.portfolio {
-  margin-top: 100px;
+  @media screen and (min-width: $tabwidth) {
+    margin-top: 100px;
+  }
 }
 section.slider {
   width: 100%;
