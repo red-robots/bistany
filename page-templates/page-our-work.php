@@ -10,8 +10,8 @@ get_header();
 
 ?>
 
-
-<div class="grad"></div>
+<!-- 
+<div class="grad"></div> -->
 
 
 	
@@ -29,7 +29,7 @@ get_header();
 	
 	if ($wp_query->have_posts()) : ?>
     
-<div class="our-work ">
+<div class="our-work">
 	<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
 			$before = get_field('before');
 			$after = get_field('after');

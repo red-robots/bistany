@@ -3625,11 +3625,11 @@ ccm_disableLinks = function() {
 // Full bg images
 
 $(document).ready(function() {
-    $('.background-image, .our-work').height($(window).height());
+    $('.background-image').height($(window).height());
 }).resize();
 
 $(window).resize(function() {
-    $('.background-image, .our-work').height($(window).height());
+    $('.background-image').height($(window).height());
 }).resize();
 
 $(function() {
