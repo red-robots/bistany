@@ -74,7 +74,7 @@ if( $background_image_url != '') {
 		?>
 			<div class="vendor-half <?php echo $floatClass; ?>">
 			
-					<h3><?php the_title(); ?></h3>
+					<h3 class="js-blocks"><?php the_title(); ?></h3>
 				
 				    <div id="slider" class="flexslider">
 				        <ul class="slides">
