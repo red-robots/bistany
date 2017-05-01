@@ -4,7 +4,10 @@
 	@include transition(all .2s ease);
 	@media screen and (min-width: $tabwidth) {
 		position: absolute;
-		bottom: 0px;
+		bottom: -20px;
+	}
+	@media screen and (min-width: $midwidth) {
+		bottom: 0;
 	}
 	&.scrolled {
 		// position: fixed;

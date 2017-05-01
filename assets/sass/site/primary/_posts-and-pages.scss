@@ -158,7 +158,7 @@ input[type="submit"] {
   background-repeat: no-repeat;
   background-position: center;
   
-  @media screen and (min-width: $tabwidth) {
+  @media screen and (min-width: $midwidth) {
     top: 0px;
     left: 0;
     width: 100%;
