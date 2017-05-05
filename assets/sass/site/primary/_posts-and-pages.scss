@@ -1428,12 +1428,15 @@ section.vendors {
 
   .vendor-half {
     width: 90%;
-    margin: 0 auto;
+    margin: 30px auto;
+    clear: both;
+    overflow: hidden;
     h3 {
       font-size: 27pt;
     }
     @media screen and (min-width: $tabwidth) {
       width: 45%;
+      clear: none;
       &.first {
         float: left;
       }
