@@ -108,7 +108,7 @@ if( $background_image_url != '') {
 				                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" />
 				                <?php } elseif( $videoUpload  != '' ) { 
 				                	echo $videoUpload;
-				                	echo 'has video';
+				                	
 				                 } else { echo ' ';} ?>
 				                
 				                </li>
