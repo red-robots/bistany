@@ -6,6 +6,7 @@ $terms_and_conditions_link = get_field('terms_and_conditions_link','option');
 $houzz_link = get_field('houzz_link','option');
 $pintrest_link = get_field('pintrest_link','option');
 $phone_number = get_field('phone_number','option');
+$address = get_field('address','option');
 $sitemap = array(
 		'link' => $sitemap_link,
 		'title' => 'sitemap', 
@@ -70,7 +71,11 @@ if( $sitemap != '' ) {
 		</li>
 	<?php } ?>
 	</ul>	
-</section>			
+</section>	
+
+<section class="address">
+	<?php echo $address; ?>
+</section>		
 
 
 </footer>
