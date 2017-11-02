@@ -6,7 +6,12 @@
  *
  * @package ACStarter
  */
-
+function my_prefix_regenerate_thumbnail_quality() {
+    return 100;
+ 
+}
+ 
+add_filter( 'jpeg_quality', 'my_prefix_regenerate_thumbnail_quality');
 /*-------------------------------------
 	Custom client login, link and title.
 ---------------------------------------*/
