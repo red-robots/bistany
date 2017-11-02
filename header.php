@@ -7,8 +7,8 @@
 	  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	       
 	  <link type='text/css' href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet'>
-    <link type="text/css" href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" />
-    <link type="text/css" href="<?php bloginfo('template_url'); ?>/menu.css" rel="stylesheet" />
+    <link type="text/css" href="<?php bloginfo('template_url'); ?>/style.min.css" rel="stylesheet" />
+    <!-- <link type="text/css" href="<?php bloginfo('template_url'); ?>/menu.css" rel="stylesheet" /> -->
 	  
 	  
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
