@@ -5,8 +5,9 @@ $contact_link = get_field('contact_link','option');
 $terms_and_conditions_link = get_field('terms_and_conditions_link','option');
 $houzz_link = get_field('houzz_link','option');
 $pintrest_link = get_field('pintrest_link','option');
+$instagram_link = get_field('instagram_link','option');
+$facebook_link = get_field('facebook_link','option');
 $phone_number = get_field('phone_number','option');
-$address = get_field('address','option');
 $sitemap = array(
 		'link' => $sitemap_link,
 		'title' => 'sitemap', 
@@ -61,6 +62,22 @@ if( $sitemap != '' ) {
 				</a>
 			</li>
 		<?php } ?>
+		<?php if( $facebook_link != '') { ?>
+			<li>
+				<a href="<?php echo $facebook_link; ?>" target="_blank">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+				<span class="social-name">Facebook</span>
+				</a>
+			</li>
+		<?php } ?>
+		<?php if( $instagram_link != '') { ?>
+			<li>
+				<a href="<?php echo $instagram_link; ?>" target="_blank">
+				<i class="fa fa-instagram" aria-hidden="true"></i>
+				<span class="social-name">Instagram</span>
+				</a>
+			</li>
+		<?php } ?>
 	</ul>
 </section>
 <section class="footer-info">
@@ -71,11 +88,7 @@ if( $sitemap != '' ) {
 		</li>
 	<?php } ?>
 	</ul>	
-</section>	
-
-<section class="address">
-	<?php echo $address; ?>
-</section>		
+</section>			
 
 
 </footer>
