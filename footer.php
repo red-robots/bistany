@@ -94,9 +94,9 @@ if( $sitemap != '' ) {
 </footer>
 
 			
-
-		</div>
-		<?php wp_footer(); ?>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+</div>
+<?php wp_footer(); ?>
 		
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

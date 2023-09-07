@@ -19,12 +19,42 @@ function acstarter_scripts() {
 			true 
 		);
 
-	wp_enqueue_script( 
+  // wp_enqueue_script( 
+  //   'acstarter-masonry', 
+  //   'https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js', 
+  //   array(), '4.2.2', 
+  //   true 
+  // );
+
+
+  wp_enqueue_script( 
+    'acstarter-lazyload', 
+    'https://cdnjs.cloudflare.com/ajax/libs/lazyload/2.0.3/lazyload-min.js', 
+    array(), '3.2.2', 
+    true 
+  );
+
+  wp_enqueue_script( 
+    'acstarter-masonry', 
+    'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js', 
+    array(), '3.0.6', 
+    true 
+  );
+
+	 wp_enqueue_script( 
 			'acstarter-custom', 
 			get_template_directory_uri() . '/assets/js/custom.js', 
 			array(), '20120206', 
 			true 
 		);
+
+
+   wp_enqueue_script( 
+      'acstarter-portfolio', 
+      get_template_directory_uri() . '/assets/js/portfolio.js', 
+      array(), '20230907', 
+      true 
+    );
 
 		// wp_enqueue_script( 
 		// 	'acstarter-base', 
@@ -54,3 +84,17 @@ function acstarter_scripts() {
 	// }
 }
 add_action( 'wp_enqueue_scripts', 'acstarter_scripts' );
+
+
+add_action('admin_head', 'my_custom_admin_style');
+function my_custom_admin_style() { ?>
+<style>
+  .acf-field-flexible-content[data-name="masonry"] .acf-fields .acf-field-image {
+    display: inline-block;
+    padding: 10px;
+  }
+  .acf-field-flexible-content[data-name="masonry"] .acf-image-uploader .image-wrap img {
+    max-height: 80px!important;
+  }
+</style>
+<?php }

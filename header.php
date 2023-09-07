@@ -33,9 +33,11 @@ if( is_single() && $postType = 'portfolio') {
   $navClass = '';
 }
 
-?> 
-     </head>
-     <body>
+?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/custom.css">
+</head>
+<body>
 <div id="page-body-wrap">
 
 
