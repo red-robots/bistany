@@ -96,6 +96,15 @@ if( $sitemap != '' ) {
 			
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 </div>
+
+<script>
+jQuery(document).ready(function($){
+  $('#mobile-toggle').on('click', function(){
+    $(this).toggleClass('active');
+    $('#site-navigation').toggleClass('active');
+  });
+});
+</script>
 <?php wp_footer(); ?>
 		
 <script>

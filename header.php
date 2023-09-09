@@ -6,7 +6,9 @@
 	  <!-- Always force latest IE rendering engine or request Chrome Frame -->
 	  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	       
-	  <link type='text/css' href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet'>
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link type="text/css" href="<?php bloginfo('template_url'); ?>/style.min.css" rel="stylesheet" />
     <!-- <link type="text/css" href="<?php bloginfo('template_url'); ?>/menu.css" rel="stylesheet" /> -->
 	  
@@ -42,17 +44,17 @@ if( is_single() && $postType = 'portfolio') {
 
 
 <header id="masthead" class="site-header <?php echo $navClass; ?>" role="banner">
-<?php if(is_home()) { ?>
-    <h1 class="logo ">
-      <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-    </h1>
-<?php } else { ?>
-    <div class="logo <?php echo $navClass; ?>">
-      <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-    </div>
-<?php } ?>
-
-
+  <div class="header-inner">
+    <?php if(is_home()) { ?>
+        <h1 class="logo ">
+          <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+        </h1>
+    <?php } else { ?>
+        <div class="logo <?php echo $navClass; ?>">
+          <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+        </div>
+    <?php } ?>
+    <span id="mobile-toggle" aria-hidden="true"><span></span></span>
     <nav id="site-navigation" class="main-navigation js-main-nav <?php echo $navClass; ?>" role="navigation">
       <div class="wrapper">
          <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
@@ -81,7 +83,7 @@ if( is_single() && $postType = 'portfolio') {
         <?php endif; wp_reset_query(); ?>
       </nav><!-- #site-navigation -->
       <?php endif; ?>
-
+  </div>    
 </header>
 
 
