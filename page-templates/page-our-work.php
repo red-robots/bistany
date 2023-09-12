@@ -29,59 +29,56 @@ get_header();
 	
 	if ($wp_query->have_posts()) : ?>
     
-<div class="our-work">
-	<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
-			$before = get_field('before');
-			$after = get_field('after');
+<div class="our-work-wrap">
 
-			$beforealt = $before['alt'];
-			$afterealt = $after['alt'];
+  <div class="wrapper">
+    <div class="flexwrap">
+  	<?php while ($wp_query->have_posts()) : $wp_query->the_post(); $i++;
+  			$before = get_field('before');
+  			$after = get_field('after');
 
-			$size = 'large';
-			$beforethumb = $before['sizes'][ $size ];
-			$afterthumb = $after['sizes'][ $size ];
+  			$beforealt = $before['alt'];
+  			$afterealt = $after['alt'];
 
-			$desc = get_field('description');
+  			$size = 'large';
+  			$beforethumb = $before['sizes'][ $size ];
+  			$afterthumb = $after['sizes'][ $size ];
 
-			$bg = get_the_post_thumbnail_url();
+  			$desc = get_field('description');
 
-			if( $i == 3 ) {
-				$postClass = 'last';
-				$i=0;
-			} else {
-				$postClass = 'first';
-			}
+  			$bg = get_the_post_thumbnail_url();
 
-	?>	
+  			if( $i == 3 ) {
+  				$postClass = 'last';
+  				$i=0;
+  			} else {
+  				$postClass = 'first';
+  			}
 
-	
-  <a href="<?php the_permalink(); ?>">
-    <div class="our-work-type <?php echo $postClass; ?> js-scroll-div" style="background-image: url(<?php echo $bg; ?>); ">
-      <h3><?php the_title(); ?></h3>
+  	?>	
+
+  	<div class="image-block">
+      <a href="<?php the_permalink(); ?>" class="imagelink <?php echo ($bg) ? 'has-image':'no-image' ?>">
+        <figure>
+          <?php if ($bg) { ?>
+          <span class="image" style="background-image:url('<?php echo $bg ?>');"></span> 
+          <?php } ?>
+          <h3><?php the_title(); ?></h3>
+        </figure>
+        <img src="<?php echo get_template_directory_uri() ?>/images/rectangle-vertical.png" class="resizer" alt="resizer" />
+      </a>
     </div>
-  </a>
-  
-   
+    
+     
 
-<?php endwhile; ?>
+    <?php endwhile; ?>
+    </div>
+  </div>
 </div>
 <!-- our work -->
 	<?php endif; wp_reset_query(); ?>
 
+<h1 style="display:none"><?php the_title(); ?></h1>
 
-<div class="primary js-scroll-div">
-	<?php while(have_posts()) : the_post(); ?>
-		<header class="title">
-			<h1><?php the_title(); ?></h1>
-		</header>
-
-		<section class=" entry-content work-content">
-			<?php the_content(); ?>
-		</section>
-
-	<?php endwhile; ?>
-
-
-</div>
 <!-- primary -->
 <?php get_footer(); ?>

@@ -43,54 +43,53 @@ if( $sitemap != '' ) {
 
  ?>
 <footer class="site-footer">
-
-<section class="social">
-	<ul>
-		<?php if( $pintrest_link != '') { ?>
-			<li>
-				<a href="<?php echo $pintrest_link; ?>" target="_blank">
-				<i class="fa fa-pinterest" aria-hidden="true"></i>
-				<span class="social-name">Pinterest</span>
-				</a>
-			</li>
-		<?php } ?>
-		<?php if( $houzz_link != '') { ?>
-			<li>
-				<a href="<?php echo $houzz_link; ?>" target="_blank">
-				<i class="fa fa-houzz" aria-hidden="true"></i>
-				<span class="social-name">Houzz</span>
-				</a>
-			</li>
-		<?php } ?>
-		<?php if( $facebook_link != '') { ?>
-			<li>
-				<a href="<?php echo $facebook_link; ?>" target="_blank">
-				<i class="fa fa-facebook" aria-hidden="true"></i>
-				<span class="social-name">Facebook</span>
-				</a>
-			</li>
-		<?php } ?>
-		<?php if( $instagram_link != '') { ?>
-			<li>
-				<a href="<?php echo $instagram_link; ?>" target="_blank">
-				<i class="fa fa-instagram" aria-hidden="true"></i>
-				<span class="social-name">Instagram</span>
-				</a>
-			</li>
-		<?php } ?>
-	</ul>
-</section>
-<section class="footer-info">
-	<ul>
-	<?php foreach( $links as $link ) { ?>
-		<li>
-			<a title="<?php echo $link['title'] ?>" href="tel:<?php echo $link['link'] ?>"><?php echo $link['wording'] ?></a>
-		</li>
-	<?php } ?>
-	</ul>	
-</section>			
-
-
+  <div class="footer-inner">
+    <section class="social">
+    	<ul>
+    		<?php if( $pintrest_link != '') { ?>
+    			<li>
+    				<a href="<?php echo $pintrest_link; ?>" target="_blank">
+    				<i class="fa fa-pinterest" aria-hidden="true"></i>
+    				<span class="social-name">Pinterest</span>
+    				</a>
+    			</li>
+    		<?php } ?>
+    		<?php if( $houzz_link != '') { ?>
+    			<li>
+    				<a href="<?php echo $houzz_link; ?>" target="_blank">
+    				<i class="fa fa-houzz" aria-hidden="true"></i>
+    				<span class="social-name">Houzz</span>
+    				</a>
+    			</li>
+    		<?php } ?>
+    		<?php if( $facebook_link != '') { ?>
+    			<li>
+    				<a href="<?php echo $facebook_link; ?>" target="_blank">
+    				<i class="fa fa-facebook" aria-hidden="true"></i>
+    				<span class="social-name">Facebook</span>
+    				</a>
+    			</li>
+    		<?php } ?>
+    		<?php if( $instagram_link != '') { ?>
+    			<li>
+    				<a href="<?php echo $instagram_link; ?>" target="_blank">
+    				<i class="fa fa-instagram" aria-hidden="true"></i>
+    				<span class="social-name">Instagram</span>
+    				</a>
+    			</li>
+    		<?php } ?>
+    	</ul>
+    </section>
+    <section class="footer-info">
+    	<ul>
+    	<?php foreach( $links as $link ) { ?>
+    		<li>
+    			<a title="<?php echo $link['title'] ?>" href="tel:<?php echo $link['link'] ?>"><?php echo $link['wording'] ?></a>
+    		</li>
+    	<?php } ?>
+    	</ul>	
+    </section>			
+  </div>
 </footer>
 
 			
