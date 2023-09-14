@@ -5,19 +5,19 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	  <!-- Always force latest IE rendering engine or request Chrome Frame -->
 	  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	       
+
 	  <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link type="text/css" href="<?php bloginfo('template_url'); ?>/style.min.css" rel="stylesheet" />
     <!-- <link type="text/css" href="<?php bloginfo('template_url'); ?>/menu.css" rel="stylesheet" /> -->
-	  
-	  
+
+
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
 
 
-	
+
 <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon-16x16.png" sizes="16x16">
@@ -27,19 +27,19 @@
 
 
 
-<?php wp_head(); 
+<?php wp_head();
 $postType = get_post_type();
-if( is_single() && $postType = 'portfolio') {
-  $navClass = 'scrolled';
-} else {
-  $navClass = '';
-}
+// if( is_single() && $postType = 'portfolio') {
+//   $navClass = 'scrolled';
+// } else {
+//   $navClass = '';
+// }
 
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/custom.css">
 </head>
-<body>
+<body <?php body_class(); ?>>
 <div id="page-body-wrap">
 
 
@@ -62,13 +62,13 @@ if( is_single() && $postType = 'portfolio') {
         </div>
         <!-- wrapper -->
       </nav><!-- #site-navigation -->
-      <?php if( is_single() && get_post_type() == 'portfolio') : 
+      <?php if( is_single() && get_post_type() == 'portfolio') :
         $i=0;
         $wp_query = new WP_Query();
         $wp_query->query(array(
         'post_type'=>'portfolio',
-        'posts_per_page' => -1, 
-        'orderby' => 'menu_order', 
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
         'order' => 'ASC'
       ));
         if ($wp_query->have_posts()) : ?>
@@ -83,7 +83,7 @@ if( is_single() && $postType = 'portfolio') {
         <?php endif; wp_reset_query(); ?>
       </nav><!-- #site-navigation -->
       <?php endif; ?>
-  </div>    
+  </div>
 </header>
 
 

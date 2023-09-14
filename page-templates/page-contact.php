@@ -19,58 +19,63 @@ if( $background_image_url != '') {
 	$theClass = 'no-feat-image';
 }
 ?>
-   
-<div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
 
-<div class="grad"></div>
-<div class="primary <?php echo $theClass; ?> js-scroll-div">
+<div class="primary <?php echo $theClass; ?>">
 
 	<?php while(have_posts()) : the_post(); ?>
-		<header class="title">
-			<h1><?php the_title(); ?></h1>
-		</header>
 
-		<div class="contact-left">
-			<?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
-		</div>
+	<section class="contact-main-content">
+		<div class="flexwrap">
+			
+			<?php if( $background_image_url ) { ?>
+			<div class="leftcol feature-image">
+        <figure class="feat-image" style="background-image: url(<?php echo $background_image_url; ?>);"></figure>
+      </div>
+			<?php } ?>
 
-		<div class="contact-right">
-			<section class="content entry-content">
-				<?php the_content(); ?>
-				<section class="contact-info">
-					<?php if($phone) { ?>
-						<div class="row">
-							<div class="first-col">Phone: </div>
-							<div class="last-col"><?php echo $phone; ?></div>
-						</div>
-					<?php } ?>
-					<?php if($email) { ?>
-						<div class="row">
-							<div class="first-col">Email: </div>
-							<div class="last-col"><a href="mailto:<?php echo $spambot; ?>"><?php echo $spambot; ?></a></div>
-						</div>
-					<?php } ?>
-					<?php if($address) { ?>
-						<div class="row">
-							<div class="first-col">Address: </div>
-							<div class="last-col"><?php echo $address; ?></div>
-						</div>
-					<?php } ?>
-				</section>
-				<section class="contact-info">
-					<?php if($showroom) { ?>
-						<div class="row">
-							<div class="first-col">Showroom: </div>
-							<div class="last-col"><?php echo $showroom; ?></div>
-						</div>
-					<?php } ?>
-				</section>
-				<div class="map">
-					<?php the_field('map'); ?>
-				</div>
-			</section>
+			<div class="rightcol contact-info">
+				<header class="title"> <h1><?php the_title(); ?></h1></header>
+				<?php if( get_the_content() ) { ?>
+				<div class="intro"><?php the_content(); ?></div>
+				<?php } ?>
+
+				<?php if($address) { ?>
+          <div class="contact-row has-icon info--address">
+						<?php echo $address; ?>
+          </div>
+        <?php } ?>
+
+        <?php if($phone) { ?>
+        <div class="contact-row has-icon info--phone">
+					<?php echo $phone; ?>
+        </div>
+        <?php } ?>
+
+        <?php if($email) { ?>
+          <div class="contact-row has-icon info--email">
+						<a href="mailto:<?php echo $spambot; ?>"><?php echo $spambot; ?></a>
+          </div>
+        <?php } ?>
+
+        <?php if($showroom) { ?>
+          <div class="contact-row info--showroom">
+						Showroom: <?php echo $showroom; ?>
+          </div>
+        <?php } ?>
+
+        <!-- <div class="map">
+          <?php //the_field('map'); ?>
+        </div> -->
+
+				<?php if( do_shortcode('[gravityform id="1" title="false" description="false"]') ) { ?>
+        <div class="contact-form-block">
+          <?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
+        </div>
+        <?php } ?>
+			</div>
+
 		</div>
-		<!-- right -->
+	</section>
 
 	<?php endwhile; ?>
 

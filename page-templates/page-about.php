@@ -67,6 +67,7 @@ if( $background_image_url != '') {
 	<section class="press-awards">
 		<section class="press">
 			<h3>Press</h3>
+			<div class="images-wrapper">
 			<?php if(have_rows('press')) : while(have_rows('press')) : the_row(); 
 				$theTitle = get_sub_field('title');
 				$image = get_sub_field('press_cover');
@@ -78,12 +79,13 @@ if( $background_image_url != '') {
 				$alt = $image['alt'];
 				$size = 'large';
 				$thumb = $image['sizes'][ $size ];
-		?>
+				?>
 				<div class="image">
 					<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"  />
 					<?php if( $pdf ) { ?><a href="<?php echo $pdf; ?>">view pdf</a><?php } ?>
 				</div>
 			<?php endwhile; endif;  wp_reset_query(); ?>
+			</div>
 		</section>
 		<?php //get_template_part('inc/awards'); ?>
 		
