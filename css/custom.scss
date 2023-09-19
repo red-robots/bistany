@@ -169,6 +169,85 @@ header#masthead a {
 .main-navigation ul > li:hover > a {
   opacity: 0.7;
 }
+.vendorList {
+	width: 100%;
+	float: left;
+	margin-bottom: 50px;
+	.flexbox {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.vendorInfo {
+		width: 25%;
+		padding: 10px;
+		text-align: center;
+	}
+	.vendorLink {
+		display: block;
+		width: 100%;
+		float: left;
+	}
+	figure {
+		margin: 0 0 15px;
+		width: 100%;
+		float: left;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative;
+		&:before {
+			content:"";
+			display:block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 5;
+			box-shadow: 0 0 200px rgba(0,0,0,0.65) inset;
+			transition: all ease .3s;
+			opacity: 0;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			float: left;
+		}
+	}
+	.vendorName {
+		width: 100%;
+    float: left;
+    font-size: 1.5em;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0 0!important;
+    padding: 0 0;
+		transition: all ease .3s;
+	}
+	.vendorLink:hover {
+		figure:before {
+			opacity: 1;
+		}
+		.vendorName {
+			font-weight: 500;
+			transform: scale(1.08);
+		}
+	}
+	@media screen and (max-width:1024px) {
+		.vendorInfo {
+			width: 50%;
+		}
+	}
+	@media screen and (max-width: 500px) {
+		.vendorInfo {
+			width: 100%;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}
 @media screen and (min-width: 600px) {
   header#masthead.scrolled {
     height: 70px;
