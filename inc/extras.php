@@ -58,7 +58,8 @@ function staff_information_func( $atts ) {
 	$posts = new WP_Query($args);
 	ob_start();
 	if ($posts->have_posts()) { ?>
-	<section class="people">
+	<section class="peopleInfo people">
+		<div class="inner">
 		<?php while ($posts->have_posts()) : $posts->the_post();
 			$image = get_field('image'); ?>
 			<div class="person <?php echo ($image) ? 'has-photo':'no-photo';?>">
@@ -77,6 +78,7 @@ function staff_information_func( $atts ) {
 				</div>
 			</div>
 		<?php endwhile; wp_reset_query(); ?>
+		</div>
 	</section>
 	<?php }
 
