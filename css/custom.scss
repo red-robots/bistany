@@ -1,11 +1,21 @@
 ﻿h1, h2, h3, h4, h5, h6 {
   font-family: proxima-nova, 'DM Sans', sans-serif;
   font-weight: 400;
+  color: #000;
+}
+body {
+  font-family: proxima-nova, 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #000;
 }
 #tinymce p, #page-body-wrap p {
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 1.4;
+  font-family: proxima-nova, 'DM Sans', sans-serif;
+	font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #000;
 }
 .grad {display:none;visibility:hidden;}
 .work-content {
@@ -252,7 +262,22 @@ header#masthead a {
 		}
 	}
 }
+.wp-block-columns.intro-column {
+  gap: 0;
+}
+.wp-block-column.title-column {
+  padding-right: 5vw;
+  h1 {
+    font-size: 40px;
+    letter-spacing: 0.02em;
+  }
+  h2 {
+    font-size: 33px;
+    letter-spacing: 0.02em;
+  }
+}
 
+#page-body-wrap,
 section.peopleInfo.people {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -265,21 +290,27 @@ section.peopleInfo.people {
 		flex-wrap: wrap;
 	}
 	.image {
-		width: 30%;
+		width: 40%;
+    padding-right: 5vw;
 	}
 	.desc {
-		width: 70%;
-		padding-left: 30px;
+		width: 60%;
 	}
+  .desc, .desc p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #000;
+  }
 
-	@media screen and (min-width: 1400px) {
-		.image {
-			width: 22%;
-		}
-		.desc {
-			width: 78%;
-		}
-	}
+	// @media screen and (min-width: 1400px) {
+	// 	.image {
+	// 		width: 22%;
+	// 	}
+	// 	.desc {
+	// 		width: 78%;
+	// 	}
+	// }
 
 	@media screen and (max-width: 1100px) {
 		.image {width:40%;}
@@ -288,11 +319,11 @@ section.peopleInfo.people {
 	@media screen and (max-width: 768px) {
 		.image {
 			width: 100%;
+      padding-right: 0;
 			margin-bottom: 30px;
 		}
 		.desc {
 			width:100%;
-			padding-left: 0;
 		}
 	}
 }
@@ -881,6 +912,38 @@ body.page-template-page-contact  {
 		}
 	}
 }
+
+.flexwrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body.subpage {
+  .primary {
+    max-width: 1300px;
+    width: 100%;
+    margin:0 auto;
+    padding-top: 50px;
+    .flexwrap {
+      align-items: center;
+    }
+  }
+  header.title {
+    width: 100%;
+    margin-bottom: 20px;
+    @media screen and (min-width: 1300px) {
+      width: 35%;
+      margin-bottom: 0;
+    }
+  }
+  .main-content {
+    width: 100%;
+    @media screen and (min-width: 1300px) {
+      width: 65%;
+    }
+  }
+}
+
 
 @media screen and (max-width:1025px) {
   footer.site-footer .footer-inner {
