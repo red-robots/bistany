@@ -1,4 +1,8 @@
-﻿#tinymce p, #page-body-wrap p {
+﻿h1, h2, h3, h4, h5, h6 {
+  font-family: proxima-nova, 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+#tinymce p, #page-body-wrap p {
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 1.4;
