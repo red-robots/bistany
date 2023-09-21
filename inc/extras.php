@@ -55,12 +55,12 @@ function staff_information_func( $atts ) {
 		'order' => 'ASC'
 	);
 	$output = '';
-	$posts = new WP_Query($args);
+	$staffinfo = new WP_Query($args);
 	ob_start();
-	if ($posts->have_posts()) { ?>
-	<section class="peopleInfo people">
+	if ($staffinfo->have_posts()) { ?>
+	<div class="peopleInfo people">
 		<div class="inner">
-		<?php while ($posts->have_posts()) : $posts->the_post();
+		<?php while ($staffinfo->have_posts()) : $staffinfo->the_post();
 			$image = get_field('image'); ?>
 			<div class="person <?php echo ($image) ? 'has-photo':'no-photo';?>">
 				<div class="image">
@@ -68,24 +68,39 @@ function staff_information_func( $atts ) {
 						$alt = $image['alt'];
 						$size = 'large';
 						$thumb = $image['sizes'][ $size ];	
+            $bio = get_field('details');
 					?>
 					<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"  />
 					<?php } ?>
 				</div>
 				<div class="desc entry-content">
-				<h2><?php the_title(); ?></h2>
-					<?php the_content(); ?>
+				  <h2><?php the_title(); ?></h2>
+					<?php echo $bio; ?>
 				</div>
 			</div>
-		<?php endwhile; wp_reset_query(); ?>
+		<?php endwhile; wp_reset_postdata(); ?>
 		</div>
-	</section>
+	</div>
 	<?php }
 
 	$output = ob_get_contents();
 	ob_end_clean();
 
 	return $output;
+}
+
+add_action('acf/save_post', 'my_acf_save_post');
+function my_acf_save_post( $post_id ) {
+
+    // Get newly saved values.
+    //$values = get_fields( $post_id );
+
+    $bio = get_field('details', $post_id);
+    $args = array(
+      'ID' => $post_id,
+      'post_content' => $bio,
+    );
+    wp_update_post( $args );
 }
 
 

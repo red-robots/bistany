@@ -333,10 +333,12 @@ header#masthead a {
 	}
 }
 
-#page-body-wrap section.peopleInfo.people,
-section.peopleInfo.people {
+#page-body-wrap .peopleInfo.people,
+.peopleInfo.people {
 	margin-top: 20px;
 	margin-bottom: 20px;
+  width: 100%;
+  float: left;
 	.inner {
 		width: 100%;
 		float: left;
@@ -345,6 +347,8 @@ section.peopleInfo.people {
 		display: flex;
 		flex-wrap: nowrap;
 		gap: 2em;
+    margin-top: 1em;
+    margin-bottom: 2.5em;
 		@media screen and (max-width:781px) {
 			flex-wrap: wrap;
 			gap: 0.65em;
@@ -361,9 +365,13 @@ section.peopleInfo.people {
 	}
 	.desc {
 		width: 60%;
+    margin: 0 0;
 		@media screen and (max-width:781px) {
 			width: 100%;
 		}
+    h2 {
+      margin-top: 0;
+    }
 	}
   .desc, .desc p {
     font-size: 18px;
