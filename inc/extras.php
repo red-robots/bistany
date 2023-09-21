@@ -134,4 +134,33 @@ function vendors_information_func( $atts ) {
   return $output;
 }
 
+add_shortcode( 'contact_details', 'contact_details_func' );
+function contact_details_func( $atts ) {
+  $phone = get_field('phone_number', 'option');
+  $email = get_field('email', 'option');
+  $address = get_field('address', 'option');
+  $output = '';
+  ob_start(); ?>
+  <?php if($address) { ?>
+  <div class="contact-row has-icon info--address">
+    <?php echo $address; ?>
+  </div>
+
+  <?php if($phone) { ?>
+  <div class="contact-row has-icon info--phone">
+    <?php echo $phone; ?>
+  </div>
+  <?php } ?>
+
+  <?php if($email) { ?>
+    <div class="contact-row has-icon info--email">
+      <a href="mailto:<?php echo antispambot($email,1); ?>"><?php echo antispambot($email); ?></a>
+    </div>
+  <?php } ?>
+
+<?php } ?>
+  <?php $output = ob_get_contents();
+  ob_end_clean();
+  return $output;
+}
 

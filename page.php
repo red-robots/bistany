@@ -20,7 +20,7 @@ if( $background_image_url != '') {
 </div>
 <main class="primary">
 	<?php while(have_posts()) : the_post(); ?>
-		<section class="flexwrap entry-content">
+		<section class="entry-content">
 			<?php
 			the_content();
 			if( is_page('sitemap') ) {
