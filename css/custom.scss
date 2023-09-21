@@ -1370,3 +1370,28 @@ body.subpage {
 		}
 	}
 }
+
+body.single-portfolio {
+	.fancybox__backdrop {
+		background-color: #FFF;
+		opacity: 1;
+	}
+	.fancybox__slide {
+		padding: 40px 5px;
+	}
+	.f-button {
+		color: #898989;
+		text-shadow: none;
+		background-color: #FFF!important;
+	}
+	.f-carousel__nav .f-button.is-prev, 
+	.f-carousel__nav .f-button.is-next, 
+	.fancybox__nav .f-button.is-prev, 
+	.fancybox__nav .f-button.is-next {
+		background-color: #FFF!important;
+		box-shadow: none!important;
+		&:focus, &:hover {
+			background-color: #000!important;
+		}
+	}
+}
