@@ -1380,6 +1380,9 @@ body.subpage {
 }
 
 body.single-portfolio {
+  .fancybox__footer {
+    display: none!important;
+  }
 	.fancybox__backdrop {
 		background-color: #FFF;
 		opacity: 1;
@@ -1390,7 +1393,7 @@ body.single-portfolio {
 	.f-button {
 		color: #898989;
 		text-shadow: none;
-		background-color: #FFF!important;
+		background-color: rgba(255,255,255,.5)!important;
 	}
 	.f-carousel__nav .f-button.is-prev, 
 	.f-carousel__nav .f-button.is-next, 
