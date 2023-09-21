@@ -87,3 +87,51 @@ function staff_information_func( $atts ) {
 
 	return $output;
 }
+
+
+add_shortcode( 'vendors_information', 'vendors_information_func' );
+function vendors_information_func( $atts ) {
+  $a = shortcode_atts( array(
+    'perpage' => 10,
+    'column' => 2
+  ), $atts );
+  $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : -1;
+  $colnum= (isset($a['column']) && $a['column']) ? $a['column'] : 2;
+  $args = array(
+    'post_type'=>'vendor',
+    'posts_per_page' => $perpage,
+    'orderby' => 'menu_order',
+    'order' => 'ASC'
+  );
+  $output = '';
+  $posts = new WP_Query($args);
+  ob_start();
+  if ($posts->have_posts()) { ?>
+  <div class="info-columns-images-wrap">
+    <div class="info-columns-images colnum-<?php echo $colnum?>">
+      <?php while ($posts->have_posts()) : $posts->the_post(); 
+        $weblink = get_field('website_link');
+        $vendorSite = ($weblink) ? $weblink : 'javascript:void(0)';
+        $target = ($weblink) ? ' target="_blank"':'';
+        ?>
+        <div class="info-column">
+          <a href="<?php echo $vendorSite?>" class="info-link"<?php echo $target?>>
+            <?php if( get_the_post_thumbnail() ) { ?>
+            <figure class="info-image" style="background-image:url('<?php echo get_the_post_thumbnail_url()?>')">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/resizer2.png" alt="" aria-hidden="true" />
+            </figure>
+            <?php } ?>
+            <span class="info-title"><?php the_title(); ?></span>
+          <a>
+        </div>
+      <?php endwhile; wp_reset_postdata(); ?>
+    </div>
+  </div>
+  <?php }
+  $output = ob_get_contents();
+  ob_end_clean();
+
+  return $output;
+}
+
+
