@@ -13,7 +13,7 @@ get_header();
    
   wp_reset_postdata();
 ?>
-
-<div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
-
+<div class="hero-block">
+  <div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
+</div>
 <?php  get_footer(); ?>

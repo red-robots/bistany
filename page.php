@@ -15,7 +15,9 @@ if( $background_image_url != '') {
 }
 ?>
 
-<div class="hero-block background-image " style="background-image: url(<?php echo $background_image_url; ?>);"></div>
+<div class="hero-block">
+	<div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
+</div>
 <main class="primary">
 	<?php while(have_posts()) : the_post(); ?>
 		<section class="flexwrap entry-content">
