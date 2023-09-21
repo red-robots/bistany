@@ -14,30 +14,19 @@ if( $background_image_url != '') {
 	$theClass = 'no-feat-image';
 }
 ?>
-   
-<div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
 
-<div class="grad"></div>
-<div class="primary <?php echo $theClass; ?> js-scroll-div">
-
+<div class="hero-block background-image " style="background-image: url(<?php echo $background_image_url; ?>);"></div>
+<main class="primary">
 	<?php while(have_posts()) : the_post(); ?>
-		<header class="title">
-			<h1><?php the_title(); ?></h1>
-		</header>
-
-		<section class="content entry-content">
-			<?php 
-
-			the_content(); 
-
+		<section class="flexwrap entry-content">
+			<?php
+			the_content();
 			if( is_page('sitemap') ) {
-				wp_nav_menu( array( 'theme_location' => 'sitemap') ); 
+				wp_nav_menu( array( 'theme_location' => 'sitemap') );
 			}
 			?>
 		</section>
-
 	<?php endwhile; ?>
-
-</div>
+</main>
 
 <?php get_footer(); ?>
