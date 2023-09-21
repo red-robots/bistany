@@ -1229,7 +1229,7 @@ body.subpage {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 	gap: 2em;
-	h2.wp-block-heading {
+	h2, h3, h4 {
 		margin-top: 0;
 	}
 	@media screen and (max-width:781px) {
