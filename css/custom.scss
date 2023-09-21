@@ -1257,6 +1257,52 @@ body.subpage {
 		}
 		li#field_1_6.gfield--type-radio {
 			margin-bottom: 15px;
+			div.gfield_radio {
+				display: flex;
+				margin-top: 0!important;
+				position: relative;
+				top: -10px;
+			}
+			div.gfield_radio div {
+				position: relative;
+				margin: 0 23px 0 0;
+				input, label {
+					margin: 0 0!important;
+				}
+				input {
+					visibility:hidden;
+				}
+				label {
+					font-size: 18px;
+					font-weight: 500;
+					padding-left: 12px;
+					width: auto!important;
+					display: inline-block!important;
+					position: relative;
+					&:before {
+						content: "";
+						display: block;
+						width: 18px;
+						height: 18px;
+						border: 1px solid #000;
+						border-radius: 100px;
+						position: absolute;
+						top: 4px;
+						left: -13px;
+					}
+				}
+				input:checked + label {
+					&:after {
+						content:"\2714";
+						display: inline-block;
+						position: absolute;
+						top: -3px;
+						left: -8px;
+						color: #000;
+						font-size: 18px;
+					}
+				}
+			}
 			ul.gfield_radio {
 				display: flex;
 				margin-top: 0!important;
