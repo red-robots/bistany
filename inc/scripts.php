@@ -10,7 +10,6 @@ function acstarter_scripts() {
 		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', false, '1.7.2', false);
 		wp_enqueue_script('jquery');
 
-	
 
 	wp_enqueue_script( 
 			'acstarter-blocks', 
