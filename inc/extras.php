@@ -29,8 +29,9 @@ function acstarter_body_classes( $classes ) {
 	} else {
 			$classes[] = 'subpage';
 	}
-	if(is_page() && $post) {
-		$classes[] = $post->post_name;
+	if(is_page() && is_singular()) {
+    global $post;
+		$classes[] = 'page--' . $post->post_name;
 	}
 
 	$browsers = ['is_iphone', 'is_chrome', 'is_safari', 'is_NS4', 'is_opera', 'is_macIE', 'is_winIE', 'is_gecko', 'is_lynx', 'is_IE', 'is_edge'];
