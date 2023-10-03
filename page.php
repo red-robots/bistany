@@ -13,11 +13,24 @@ if( $background_image_url != '') {
 } else {
 	$theClass = 'no-feat-image';
 }
-?>
 
-<div class="hero-block">
-	<div class="background-image" style="background-image: url(<?php echo $background_image_url; ?>);"></div>
-</div>
+$banner_types = get_field('banner_types');
+$banner = '';
+if($banner_types) {
+  $banner = get_field('banner_'.$banner_types);
+}
+
+$bannerResizer = get_stylesheet_directory_uri() . '/images/rectangle-h.png';
+?>
+<?php if($banner) { ?>
+<figure class="pageHeroBlock <?php echo $banner_types ?>">
+  <span style="background-image:url('<?php echo $banner['url']?>')"></span>
+</figure>
+<?php } ?>
+<!-- <div class="hero-block">
+	<div class="background-image" style="background-image: url(<?php //echo $background_image_url; ?>);"></div>
+</div> -->
+
 <main class="primary">
 	<?php while(have_posts()) : the_post(); ?>
 		<section class="entry-content">
