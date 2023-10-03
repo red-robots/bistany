@@ -1074,11 +1074,11 @@ body.subpage {
             box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
           }
         }
-        ul.gfield_radio {
+        .gfield_radio {
           display: flex;
           flex-wrap: wrap;
         }
-        ul.gfield_radio li {
+        .gfield_radio .gchoice {
           position: relative;
           padding-left: 28px!important;
           min-width: 150px;
