@@ -91,16 +91,14 @@ function staff_information_func( $atts ) {
 
 add_action('acf/save_post', 'my_acf_save_post');
 function my_acf_save_post( $post_id ) {
-
-    // Get newly saved values.
-    //$values = get_fields( $post_id );
-
+  if( get_post_type($post_id)=='staff' ) {
     $bio = get_field('details', $post_id);
     $args = array(
       'ID' => $post_id,
       'post_content' => $bio,
     );
     wp_update_post( $args );
+  }
 }
 
 

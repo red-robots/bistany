@@ -39,3 +39,5 @@ function acstarter_infinite_scroll_render() {
 		endif;
 	}
 }
+
+

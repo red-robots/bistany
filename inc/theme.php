@@ -180,7 +180,6 @@ show_admin_bar(false);
 
 ---------------------------------------*/
 function bistany_remove_menus(){
-  
   // remove_menu_page( 'index.php' );                  //Dashboard
   // remove_menu_page( 'jetpack' );                    //Jetpack* 
   remove_menu_page( 'edit.php' );                   //Posts
@@ -192,6 +191,6 @@ function bistany_remove_menus(){
   // remove_menu_page( 'users.php' );                  //Users
   // remove_menu_page( 'tools.php' );                  //Tools
   // remove_menu_page( 'options-general.php' );        //Settings
-  
 }
 add_action( 'admin_menu', 'bistany_remove_menus' );
+
