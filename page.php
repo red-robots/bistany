@@ -14,7 +14,7 @@ if( $background_image_url != '') {
 	$theClass = 'no-feat-image';
 }
 
-$banner_visibility = get_field('banner_visibilty');
+$banner_visibility = get_field('banner_visibility');
 $banner_types = get_field('banner_types');
 $banner = '';
 if($banner_types) {
