@@ -14,6 +14,7 @@ if( $background_image_url != '') {
 	$theClass = 'no-feat-image';
 }
 
+$banner_visibility = get_field('banner_visibilty');
 $banner_types = get_field('banner_types');
 $banner = '';
 if($banner_types) {
@@ -21,6 +22,9 @@ if($banner_types) {
 }
 
 $bannerResizer = get_stylesheet_directory_uri() . '/images/rectangle-h.png';
+if($banner_visibility=='hide') {
+  $banner = false;
+}
 ?>
 <?php if($banner) { ?>
 <figure class="pageHeroBlock <?php echo $banner_types ?>">
