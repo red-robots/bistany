@@ -35,10 +35,10 @@ $postType = get_post_type();
 // } else {
 //   $navClass = '';
 // }
-
+$navClass = '';
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/custom.css?v=09232022">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/custom.css?v=10082025">
 </head>
 <body <?php body_class(); ?>>
 <div id="page-body-wrap">

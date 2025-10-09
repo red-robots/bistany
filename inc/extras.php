@@ -156,18 +156,18 @@ function contact_details_func( $atts ) {
   $output = '';
   ob_start(); ?>
   <?php if($address) { ?>
-  <div class="contact-row has-icon info--address">
+  <div class="contact-row info--address">
     <?php echo $address; ?>
   </div>
 
   <?php if($phone) { ?>
-  <div class="contact-row has-icon info--phone">
+  <div class="contact-row info--phone">
     <?php echo $phone; ?>
   </div>
   <?php } ?>
 
   <?php if($email) { ?>
-    <div class="contact-row has-icon info--email">
+    <div class="contact-row info--email">
       <a href="mailto:<?php echo antispambot($email,1); ?>"><?php echo antispambot($email); ?></a>
     </div>
   <?php } ?>
