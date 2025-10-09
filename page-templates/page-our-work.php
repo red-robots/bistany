@@ -6,16 +6,8 @@
 *
 *
 */
-get_header();
-
-?>
-
-<!-- 
-<div class="grad"></div> -->
-
-
-	
-
+get_header(); ?>
+<!-- <div class="grad"></div> -->
 
 <?php
 	$i=0;
@@ -37,12 +29,14 @@ get_header();
   			$before = get_field('before');
   			$after = get_field('after');
 
-  			$beforealt = $before['alt'];
-  			$afterealt = $after['alt'];
+			if( $before && $after){
+				$beforealt = $before['alt'];
+				$afterealt = $after['alt'];
 
-  			$size = 'large';
-  			$beforethumb = $before['sizes'][ $size ];
-  			$afterthumb = $after['sizes'][ $size ];
+				$size = 'large';
+				$beforethumb = $before['sizes'][ $size ];
+				$afterthumb = $after['sizes'][ $size ];
+			}
 
   			$desc = get_field('description');
 
@@ -69,8 +63,6 @@ get_header();
       </a>
     </div>
     
-     
-
     <?php endwhile; ?>
     </div>
   </div>

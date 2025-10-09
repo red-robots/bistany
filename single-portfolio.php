@@ -3,12 +3,11 @@ get_header();
 
 ?>
 <div class="wrapper">
-
 <section class="portfolio  js-scroll-div">
-<?php if( have_posts() ) : while( have_posts() ) : the_post();
 
-$desc = get_field('description');
-
+<?php
+  if( have_posts() ) : while( have_posts() ) : the_post();
+  $desc = get_field('description');
 ?>
 
   <h1 style="display:none"><?php the_title(); ?></h1>
@@ -70,7 +69,7 @@ $desc = get_field('description');
             }
 
             if($images) { ?>
-            <div class="grid 3_image_row">
+            <div class="grid 3_image_row grid_full">
               <?php foreach ($images as $img) { ?>
                 <div class="grid-item row-3-image wow fadeIn">
                   <a href="<?php echo $img['url']; ?>" data-fancybox="gallery">

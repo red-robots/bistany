@@ -1460,6 +1460,7 @@ body.single-portfolio .fancybox__slide{padding:40px 5px}
 body.single-portfolio .f-button{color:#898989;text-shadow:none;background-color:rgba(255,255,255,.5) !important}
 body.single-portfolio .f-carousel__nav .f-button.is-prev,body.single-portfolio .f-carousel__nav .f-button.is-next,body.single-portfolio .fancybox__nav .f-button.is-prev,body.single-portfolio .fancybox__nav .f-button.is-next{background-color:#fff !important;-webkit-box-shadow:none !important;box-shadow:none !important}
 body.single-portfolio .f-carousel__nav .f-button.is-prev:focus,body.single-portfolio .f-carousel__nav .f-button.is-prev:hover,body.single-portfolio .f-carousel__nav .f-button.is-next:focus,body.single-portfolio .f-carousel__nav .f-button.is-next:hover,body.single-portfolio .fancybox__nav .f-button.is-prev:focus,body.single-portfolio .fancybox__nav .f-button.is-prev:hover,body.single-portfolio .fancybox__nav .f-button.is-next:focus,body.single-portfolio .fancybox__nav .f-button.is-next:hover{background-color:#000 !important}
+.grid_full{width:99vw;margin-left:-4vw;overflow:hidden}
 *,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit}
 html{-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{margin:0;padding:0}
