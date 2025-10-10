@@ -70,7 +70,7 @@ get_header();
             }
 
             if($images) { ?>
-            <div class="grid 3_image_row grid_full">
+            <div class="grid 3_image_row">
               <?php foreach ($images as $img) { ?>
                 <div class="grid-item row-3-image wow fadeIn">
                   <a href="javascript:;">
