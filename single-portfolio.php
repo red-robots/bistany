@@ -84,6 +84,35 @@ get_header();
             </div>
             <?php } ?>
 
+          <?php }
+
+            else if( get_row_layout() == '4_image_row' ) {
+              $images = [];
+              for($n=1; $n<=2; $n++) {
+                $image = get_sub_field('image_'.$n);
+                if($image) {
+                  $images[] = $image;
+                }
+              }
+
+              $i = 1;
+              if($images) { ?>
+              <div class="grid 4_image_row">
+                <?php
+                  $count = count($images);
+                  foreach ($images as $img) { ?>
+                  <div class="grid-item row-4-image wow fadeIn ratio-1-3 ratio-image-<?php echo $i; ?>">
+                    <a href="<?php echo $img['url']; ?>" data-fancybox="gallery">
+                      <span style="background-image:url('<?php echo $img['url'] ?>');">
+                      <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['title'] ?>" class="lazy">
+                      <img src="<?php echo get_stylesheet_directory_uri() ?>/images/resizer.png" alt="" class="resizer" aria-hidden="true">
+                    </span>
+                    </a>
+                  </div>
+                <?php $i++; } ?>
+              </div>
+              <?php } ?>
+
           <?php } ?>
 
     <?php $count ++;

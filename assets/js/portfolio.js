@@ -18,6 +18,7 @@ jQuery(document).ready(function ($) {
         //   gutter: 20
         //   //columnWidth: '.grid-sizer'
         // }
+        layoutMode: 'fitRows',
        });
     });
   });
@@ -25,8 +26,6 @@ jQuery(document).ready(function ($) {
   $con.on('layoutComplete', function(){
     $win.trigger("scroll");
   });
-
-  
 
   Fancybox.bind('[data-fancybox="gallery"]', {
     on: {
@@ -41,7 +40,5 @@ jQuery(document).ready(function ($) {
       },
     },
   });
-
-
   
 }); 
