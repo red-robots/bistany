@@ -1350,8 +1350,12 @@ header#masthead{position:relative !important}
 #page-body-wrap .background-image{margin-top:0 !important;background-attachment:scroll !important}
 .our-work-wrap{margin-top:0}
 #work-navigation{display:none !important}
+body.single-portfolio{overflow-x:hidden}
 body.single-portfolio .wrapper{max-width:90vw;width:100%}
 body.single-portfolio section.portfolio{margin-top:0}
+body.single-portfolio section.portfolio .grid_overlap{width:100vw;margin-left:-5vw}
+body.single-portfolio section.portfolio .grid_overlap .grid-item a span{-webkit-box-shadow:0 0 300px rgba(0,0,0,.75) inset;box-shadow:0 0 300px rgba(0,0,0,.75) inset}
+body.single-portfolio section.portfolio .grid_overlap a{border:0}
 body.page-template-page-contact .primary.with-feat-image{margin-top:0}
 .contact-main-content .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-left:-20px;margin-right:-20px}
 .contact-main-content .leftcol,.contact-main-content .rightcol{width:50%;padding:0 20px}
@@ -1578,6 +1582,13 @@ header#masthead{height:203px;position:fixed;width:100%;z-index:1001;top:0;right:
 .info-columns-images.colnum-3 .info-column{width:33.333%}
 .info-columns-images.colnum-4 .info-column{width:25%}
 .info-columns-images.colnum-5 .info-column{width:20%}
+}@media screen and (min-width:1159px){body.single-portfolio .wrapper{padding:0}
+body.single-portfolio header#masthead.overlap{position:fixed !important;background-color:transparent}
+body.single-portfolio header#masthead.overlap .logo,body.single-portfolio header#masthead.overlap h1.logo{-webkit-filter:invert(100%);filter:invert(100%)}
+body.single-portfolio header#masthead.overlap .main-navigation a{background-color:transparent;color:#fff}
+body.single-portfolio header#masthead.overlap:hover{background-color:rgba(255,255,255,.9)}
+body.single-portfolio header#masthead.overlap:hover .logo,body.single-portfolio header#masthead.overlap:hover h1.logo{-webkit-filter:invert(0);filter:invert(0)}
+body.single-portfolio header#masthead.overlap:hover .main-navigation a{color:#3e3e3e}
 }@media screen and (min-width:1200px){.main-navigation li{font-size:18px}
 #work-navigation.scrolled{top:52px}
 #work-navigation li{font-size:18px}

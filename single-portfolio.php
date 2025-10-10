@@ -8,6 +8,7 @@ get_header();
 <?php
   if( have_posts() ) : while( have_posts() ) : the_post();
   $desc = get_field('description');
+  $count = 1;
 ?>
 
   <h1 style="display:none"><?php the_title(); ?></h1>
@@ -18,7 +19,7 @@ get_header();
         <?php if( get_row_layout() == '1_image_row' ) {
             $image = get_sub_field('image_1');
             if($image) { ?>
-            <div class="grid 1_image_row">
+            <div class="grid 1_image_row <?php echo ($count == 1) ? 'grid_overlap' : ''; ?>">
               <div class="grid-item row-1-image wow fadeIn">
                 <a href="<?php echo $image['url']; ?>" data-fancybox="gallery">
                   <span style="background-image:url('<?php echo $image['url'] ?>');">
@@ -85,7 +86,9 @@ get_header();
 
           <?php } ?>
 
-    <?php endwhile; ?>
+    <?php $count ++;
+      endwhile;
+    ?>
   <?php } ?>
 
 <?php endwhile; endif; ?>

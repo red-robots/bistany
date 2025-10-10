@@ -30,15 +30,16 @@
 
 <?php wp_head();
 $postType = get_post_type();
-// if( is_single() && $postType = 'portfolio') {
-//   $navClass = 'scrolled';
-// } else {
-//   $navClass = '';
-// }
-$navClass = '';
+if( is_single() && $postType = 'portfolio') {
+  //$navClass = 'scrolled';
+  $navClass = 'overlap';
+} else {
+  $navClass = '';
+}
+
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/custom.css?v=10082025">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/custom.css?v=10102025">
 </head>
 <body <?php body_class(); ?>>
 <div id="page-body-wrap">

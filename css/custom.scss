@@ -221,7 +221,6 @@ header#masthead a {
   height: 100%!important;
 }
 
-
 #page-body-wrap .background-image {
   max-width: 100%!important;
 	width: 100%!important;
@@ -793,12 +792,59 @@ header#masthead {
 	display: none!important;
 }
 body.single-portfolio {
+	overflow-x: hidden;
 	.wrapper {
 		max-width: $container;
 		width: 100%;
+
+		@media screen and (min-width: 1159px) {
+			padding: 0;
+		}
 	}
+	
 	section.portfolio {
 		margin-top: 0;
+
+		.grid_overlap {
+			width: 100vw;
+			margin-left: -5vw;
+
+			.grid-item a span {
+				box-shadow: 0 0 300px rgba(0, 0, 0, .75) inset;
+			}
+
+			a {
+				border: none;
+			}
+		}
+	}
+	/*** Overlap ***/
+	@media screen and (min-width: 1159px) {
+		header#masthead.overlap {
+			position: fixed !important;
+			background-color: transparent;
+
+			.logo, h1.logo {
+				filter: invert(100%);
+			}
+
+			.main-navigation a {
+				background-color: transparent;
+				color: #FFF;
+			}
+
+			&:hover {
+				background-color: rgba(255, 255, 255, .9);
+
+				.logo, h1.logo {
+					filter: invert(0);
+				}
+
+				.main-navigation a {
+					color: #3e3e3e;
+				}
+			}
+		}
 	}
 }
 
@@ -1263,21 +1309,21 @@ body.subpage {
 @media screen and (max-width:820px) {
 	.our-work-wrap .wrapper {
 		padding-left: 20px;
-    padding-right: 20px;
+    	padding-right: 20px;
 	}
 	body.single-portfolio .wrapper {
 		max-width: 100%;
 	}
-  .our-work-wrap .image-block {
-    width: 100%;
-  }
-  .grid-item {
-    width: 100%!important;
-  }
-  #page-body-wrap .our-work a {
-    display: inline-block;
-    width: 100%;
-  }
+	.our-work-wrap .image-block {
+		width: 100%;
+	}
+	.grid-item {
+		width: 100%!important;
+	}
+	#page-body-wrap .our-work a {
+		display: inline-block;
+		width: 100%;
+	}
 }
 
 .contact-row  {
