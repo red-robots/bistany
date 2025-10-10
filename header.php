@@ -13,11 +13,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/oxk0pfa.css">
     <!-- <link type="text/css" href="<?php bloginfo('template_url'); ?>/menu.css" rel="stylesheet" /> -->
 
-
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
-
-
 
 <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon/favicon-32x32.png" sizes="32x32">
@@ -25,8 +21,6 @@
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/images/favicon/manifest.json">
 <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
-
-
 
 <?php wp_head();
 $postType = get_post_type();
@@ -39,11 +33,9 @@ if( is_single() && $postType = 'portfolio') {
 
 ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/custom.css?v=10102025">
 </head>
 <body <?php body_class(); ?>>
 <div id="page-body-wrap">
-
 
 <header id="masthead" class="site-header <?php echo $navClass; ?>" role="banner">
   <div class="header-inner">

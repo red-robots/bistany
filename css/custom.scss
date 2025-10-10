@@ -99,6 +99,7 @@ body {
   border: 5px solid #FFF;
   overflow: hidden;
   transition: all ease .3s;
+  cursor: default;
 }
 .grid-item a * {
   transition: all ease .5s;
@@ -116,9 +117,9 @@ body {
   background-repeat: no-repeat;
   box-shadow: 0 0 15px transparent inset;
 }
-.grid-item a:hover span {
-  box-shadow: 0 0 300px rgba(0,0,0,.75) inset;
-}
+// .grid-item a:hover span {
+//   box-shadow: 0 0 300px rgba(0,0,0,.75) inset;
+// }
 .grid-item img:not(.resizer) {
   display: none;
 }
