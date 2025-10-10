@@ -1573,7 +1573,6 @@ header#masthead.scrolled{height:70px;padding-top:5px;padding-block:5px;-webkit-b
 }@media all and (min-width:720px){.o-sub-nav{margin:0 0 48px 0}
 }@media(min-width:768px)and (max-width:1400px){#page-body-wrap .image-gallery .cycle-prev{left:0;margin-top:-16px;width:69px;height:30px}
 #page-body-wrap .image-gallery .cycle-next{right:0;margin-top:-16px;width:69px;height:30px}
-}@media screen and (min-width:820px){.grid_full{width:98vw;margin-left:-4vw;overflow:hidden}
 }@media screen and (min-width:900px){.main-navigation{bottom:0}
 .main-navigation li{font-size:12px}
 header#masthead{height:203px;position:fixed;width:100%;z-index:1001;top:0;right:0}
