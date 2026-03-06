@@ -1466,6 +1466,16 @@ body.single-portfolio .f-button{color:#898989;text-shadow:none;background-color:
 body.single-portfolio .fancybox__nav{display:none}
 body.single-portfolio .f-carousel__nav .f-button.is-prev,body.single-portfolio .f-carousel__nav .f-button.is-next,body.single-portfolio .fancybox__nav .f-button.is-prev,body.single-portfolio .fancybox__nav .f-button.is-next{background-color:#fff !important;-webkit-box-shadow:none !important;box-shadow:none !important}
 body.single-portfolio .f-carousel__nav .f-button.is-prev:focus,body.single-portfolio .f-carousel__nav .f-button.is-prev:hover,body.single-portfolio .f-carousel__nav .f-button.is-next:focus,body.single-portfolio .f-carousel__nav .f-button.is-next:hover,body.single-portfolio .fancybox__nav .f-button.is-prev:focus,body.single-portfolio .fancybox__nav .f-button.is-prev:hover,body.single-portfolio .fancybox__nav .f-button.is-next:focus,body.single-portfolio .fancybox__nav .f-button.is-next:hover{background-color:#000 !important}
+html,body,*,::before,::after{-webkit-box-sizing:border-box;box-sizing:border-box}
+section.portfolio .grid figure{margin:0;position:relative;width:100%;float:left}
+section.portfolio .grid figure img{display:block !important;width:100%;height:auto}
+section.portfolio .grid figure:has(img.resizer) img.resizer{width:100%;height:auto;float:left;pointer-events:none}
+section.portfolio .grid figure:has(img.resizer) img:not(.resizer){width:100% !important;height:100% !important;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;z-index:5}
+section.portfolio .grid_1_image_row{margin-bottom:2.5px}
+section.portfolio .grid:not(.grid_1_image_row){padding:0 1.5px}
+section.portfolio .grid-inner{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+section.portfolio .grid_2_image_row .grid-item{width:50%;padding:5px}
+section.portfolio .grid_3_image_row .grid-item{width:33.333%;padding:5px}
 *,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit}
 html{-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -1687,6 +1697,7 @@ button.menu-button{top:12px}
 h2{font-size:1.7rem}
 #page-body-wrap .peopleInfo.people .image,.peopleInfo.people .image{width:100%;padding-right:0;margin-bottom:30px}
 #page-body-wrap .peopleInfo.people .desc,.peopleInfo.people .desc{width:100%}
+section.portfolio .grid .grid-item{width:100% !important;padding-left:0 !important;padding-right:0 !important}
 }@media screen and (max-width:600px){body.subpage .primary{max-width:100% !important}
 .pageHeroBlock.large{height:500px}
 .pageHeroBlock.small{height:300px}

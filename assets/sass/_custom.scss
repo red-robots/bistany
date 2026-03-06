@@ -1,0 +1,67 @@
+html,body,*,::before,::after {
+  box-sizing: border-box;
+}
+section.portfolio {
+  .grid {
+    figure {
+      margin: 0 0;
+      position: relative;
+      width: 100%;
+      float: left;
+      img {
+        display: block!important;
+        width: 100%;
+        height: auto;
+      }
+      &:has(img.resizer) {
+        img.resizer {
+          width: 100%;
+          height: auto;
+          float: left;
+          pointer-events: none;
+        }
+        img:not(.resizer) {
+          width: 100%!important;
+          height: 100%!important;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          object-position: center;
+          z-index: 5;
+        }
+      }
+    }
+  }
+  .grid_1_image_row {
+    margin-bottom: 2.5px;
+  }
+  .grid:not(.grid_1_image_row) {
+    padding: 0 1.5px;
+  }
+  .grid-inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid_2_image_row {
+    .grid-item {
+      width: 50%;
+      padding: 5px;
+    }
+  }
+  .grid_3_image_row {
+    .grid-item {
+      width: 33.333%;
+      padding: 5px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .grid .grid-item {
+      width: 100%!important;
+      padding-left: 0!important;
+      padding-right: 0!important;
+    }
+  }
+}
