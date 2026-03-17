@@ -1469,6 +1469,7 @@ body.single-portfolio .f-carousel__nav .f-button.is-prev:focus,body.single-portf
 html,body,*,::before,::after{-webkit-box-sizing:border-box;box-sizing:border-box}
 #mobile-toggle{right:0 !important}
 section.portfolio{padding:0}
+section.portfolio .grid{margin:0 0 !important}
 section.portfolio .grid figure{margin:0;position:relative;width:100%;float:none;border:5px solid #fff}
 section.portfolio .grid figure img{display:block !important;width:100%;height:auto}
 section.portfolio .grid figure:has(img.resizer) img.resizer{width:100%;height:auto;float:left;pointer-events:none}
