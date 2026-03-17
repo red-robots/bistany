@@ -1467,15 +1467,19 @@ body.single-portfolio .fancybox__nav{display:none}
 body.single-portfolio .f-carousel__nav .f-button.is-prev,body.single-portfolio .f-carousel__nav .f-button.is-next,body.single-portfolio .fancybox__nav .f-button.is-prev,body.single-portfolio .fancybox__nav .f-button.is-next{background-color:#fff !important;-webkit-box-shadow:none !important;box-shadow:none !important}
 body.single-portfolio .f-carousel__nav .f-button.is-prev:focus,body.single-portfolio .f-carousel__nav .f-button.is-prev:hover,body.single-portfolio .f-carousel__nav .f-button.is-next:focus,body.single-portfolio .f-carousel__nav .f-button.is-next:hover,body.single-portfolio .fancybox__nav .f-button.is-prev:focus,body.single-portfolio .fancybox__nav .f-button.is-prev:hover,body.single-portfolio .fancybox__nav .f-button.is-next:focus,body.single-portfolio .fancybox__nav .f-button.is-next:hover{background-color:#000 !important}
 html,body,*,::before,::after{-webkit-box-sizing:border-box;box-sizing:border-box}
-section.portfolio .grid figure{margin:0;position:relative;width:100%;float:left}
+#mobile-toggle{right:0 !important}
+section.portfolio{padding:0}
+section.portfolio .grid figure{margin:0;position:relative;width:100%;float:none;border:5px solid #fff}
 section.portfolio .grid figure img{display:block !important;width:100%;height:auto}
 section.portfolio .grid figure:has(img.resizer) img.resizer{width:100%;height:auto;float:left;pointer-events:none}
 section.portfolio .grid figure:has(img.resizer) img:not(.resizer){width:100% !important;height:100% !important;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;z-index:5}
 section.portfolio .grid_1_image_row{margin-bottom:2.5px}
-section.portfolio .grid:not(.grid_1_image_row){padding:0 1.5px}
+section.portfolio .grid:not(.grid_1_image_row){padding:0}
 section.portfolio .grid-inner{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
-section.portfolio .grid_2_image_row .grid-item{width:50%;padding:5px}
-section.portfolio .grid_3_image_row .grid-item{width:33.333%;padding:5px}
+section.portfolio .grid_2_image_row .grid-item{width:50%;padding:0}
+section.portfolio .grid_3_image_row .grid-item{width:33.333%;padding:0}
+footer.site-footer{overflow:auto}
+footer.site-footer:before{content:"";clear:both;display:table}
 *,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit}
 html{-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -1593,6 +1597,7 @@ header#masthead{height:203px;position:fixed;width:100%;z-index:1001;top:0;right:
 .info-columns-images.colnum-3 .info-column{width:33.333%}
 .info-columns-images.colnum-4 .info-column{width:25%}
 .info-columns-images.colnum-5 .info-column{width:20%}
+section.portfolio{padding:5px 5px 0}
 }@media screen and (min-width:1159px){body.single-portfolio .wrapper{padding:0}
 body.single-portfolio header#masthead.overlap{position:fixed !important;background-color:transparent}
 body.single-portfolio header#masthead.overlap .logo,body.single-portfolio header#masthead.overlap h1.logo{-webkit-filter:invert(100%);filter:invert(100%)}
@@ -1633,6 +1638,7 @@ body:not(.home) #page-body-wrap .background-image{margin-top:10px}
 #page-body-wrap .our-work{padding:5px 30px 30px;height:auto;display:block;width:100%;float:left;margin-bottom:30px}
 #page-body-wrap .our-work a{margin-bottom:25px;display:inline}
 .our-work-type{height:40vh}
+#masthead .header-inner{position:relative;max-width:100%}
 }@media screen and (max-width:1100px){#page-body-wrap .peopleInfo.people .image,.peopleInfo.people .image{width:40%}
 #page-body-wrap .peopleInfo.people .desc,.peopleInfo.people .desc{width:60%}
 }@media(max-width:1080px){#page-body-wrap .manufacturer h3{line-height:20px;padding-top:60px;height:100%;font-size:7pt;background-color:rgba(85,85,85,.75);color:#fff}
@@ -1665,6 +1671,7 @@ body.single-portfolio .wrapper{max-width:100%}
 .our-work-wrap .image-block{width:100%}
 .grid-item{width:100% !important}
 #page-body-wrap .our-work a{display:inline-block;width:100%}
+header#masthead{padding-left:22px;padding-right:25px}
 }@media screen and (max-width:782px){.wp-block-column.text-column{padding-left:0}
 .wp-block-column.image-column{padding-left:0}
 }@media screen and (max-width:781px){.wp-block-columns.intro-column{-ms-flex-wrap:wrap;flex-wrap:wrap;gap:.65em}

@@ -3,8 +3,7 @@ get_header();
 
 ?>
 <div class="wrapper">
-<section class="portfolio  js-scroll-div">
-
+<section class="portfolio js-scroll-div-nojs">
 <?php
   if( have_posts() ) : while( have_posts() ) : the_post();
   $desc = get_field('description');
