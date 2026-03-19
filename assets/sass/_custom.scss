@@ -28,7 +28,19 @@ section.portfolio {
       position: relative;
       width: 100%;
       float: none;
-      border: 5px solid #FFF;
+      &:before {
+        content:"";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 5px solid #FFF;
+        z-index: 5;
+        pointer-events: none;
+      }
+      // border: 5px solid #FFF;
       img {
         display: block!important;
         width: 100%;

@@ -1470,7 +1470,8 @@ html,body,*,::before,::after{-webkit-box-sizing:border-box;box-sizing:border-box
 #mobile-toggle{right:0 !important}
 section.portfolio{padding:0}
 section.portfolio .grid{margin:0 0 !important}
-section.portfolio .grid figure{margin:0;position:relative;width:100%;float:none;border:5px solid #fff}
+section.portfolio .grid figure{margin:0;position:relative;width:100%;float:none}
+section.portfolio .grid figure:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;border:5px solid #fff;z-index:5;pointer-events:none}
 section.portfolio .grid figure img{display:block !important;width:100%;height:auto}
 section.portfolio .grid figure:has(img.resizer) img.resizer{width:100%;height:auto;float:left;pointer-events:none}
 section.portfolio .grid figure:has(img.resizer) img:not(.resizer){width:100% !important;height:100% !important;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center;z-index:5}
