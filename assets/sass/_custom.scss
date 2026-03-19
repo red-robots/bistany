@@ -1123,6 +1123,8 @@ body.subpage {
       .gform_wrapper {
         margin-top: 50px;
         .gfield .ginput_container input[type="text"],
+        .gfield .ginput_container input[type="tel"],
+        .gfield .ginput_container input[type="number"],
         .gfield .ginput_container input[type="email"],
         .gfield .ginput_container textarea,
         .gfield .ginput_container select {
