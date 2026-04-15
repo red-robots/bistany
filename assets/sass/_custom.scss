@@ -834,6 +834,16 @@ body.single-portfolio {
         border: none;
       }
     }
+
+    .grid.grid_5_image_row {
+      .ratio-image-2 {
+        width: 66.666%;
+      }
+      .ratio-image-1 {
+        width: 33.333%;
+      }
+    }
+
   }
   /*** Overlap ***/
   @media screen and (min-width: 1159px) {

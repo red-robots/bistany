@@ -106,7 +106,29 @@ get_header();
               </div>
               <?php } ?>
 
-          <?php } ?>
+          <?php } 
+
+          else if( get_row_layout() == '5_image_row' ) { 
+            $horizontal_image = get_sub_field('image_2');
+            $vertical_image = get_sub_field('image_1');
+            if($horizontal_image && $vertical_image) { ?>
+            <div class="grid grid_5_image_row">
+              <div class="grid-inner">
+                <div class="grid-item row-5-image wow fadeIn ratio-image-2">
+                  <figure>
+                    <img src="<?php echo $horizontal_image['url'] ?>" alt="<?php echo $horizontal_image['title'] ?>" class="lazy">
+                  </figure>
+                </div>
+
+                <div class="grid-item row-5-image wow fadeIn ratio-image-1">
+                  <figure>
+                    <img src="<?php echo $vertical_image['url'] ?>" alt="<?php echo $vertical_image['title'] ?>" class="lazy">
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <?php }   
+          } ?>
 
     <?php $count ++;
       endwhile;
